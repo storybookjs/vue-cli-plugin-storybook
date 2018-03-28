@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "prepublishOnly": "npm run test",
-    "test": "npm run test:eslint",
-    "test:eslint": "eslint --ext .js ."
+    "test": "npm run test:eslint && npm run test:ejslint",
+    "test:eslint": "eslint --ext .js .",
+    "test:ejslint":
+      "ejslint generator/template/src/components/MyButton.vue && ejslint generator/template/src/components/Welcome.vue"
   },
   "repository": {
     "type": "git",
@@ -32,6 +34,7 @@
     "@types/storybook__addon-notes": "^3.3.1",
     "@types/storybook__vue": "^3.3.0",
     "babel-core": "6.26.0",
+    "ejs-lint": "^0.3.0",
     "storybook": "^1.0.0",
     "vue-storybook": "^0.2.0",
     "webpack-merge": "^4.1.2"
