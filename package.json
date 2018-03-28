@@ -1,5 +1,5 @@
 {
-  "name": "vue-cli-plugin-apollo",
+  "name": "vue-cli-plugin-storybook",
   "version": "0.1.0",
   "description": "vue-cli 3 plugin to add Storybook",
   "main": "index.js",
@@ -31,6 +31,7 @@
     "@types/storybook__addon-links": "^3.3.0",
     "@types/storybook__addon-notes": "^3.3.1",
     "@types/storybook__vue": "^3.3.0",
+    "eslint-config-prettier": "^2.9.0",
     "storybook": "^1.0.0",
     "vue-storybook": "^0.2.0",
     "webpack-merge": "^4.1.2"
@@ -41,7 +42,6 @@
     "babel-eslint": "^8.2.1",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.10.0",
-    "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^6.0.0",
     "eslint-plugin-promise": "^3.4.0",

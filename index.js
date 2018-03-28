@@ -1,4 +1,4 @@
-const { log, hasYarn } = require("@vue/cli-shared-utils");
+const { hasYarn } = require("@vue/cli-shared-utils");
 const chalk = require("chalk");
 
 module.exports = (api, options) => {
