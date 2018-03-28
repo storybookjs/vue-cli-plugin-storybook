@@ -14,15 +14,24 @@ module.exports = (api, options) => {
     if (!args._.length) {
       testMatch = [`-p`, `6006`];
     }
+    console.log("args", JSON.stringify(args));
+    console.log("testMatch", JSON.stringify(testMatch));
 
     const argv = [...rawArgv, ...testMatch];
+
+    console.log("argv", JSON.stringify(argv));
 
     return new Promise((resolve, reject) => {
       const child = execa(startStorybookBinPath, argv, {
         cwd: api.resolve("."),
         stdio: "inherit"
       });
-      child.on("error", reject);
+      child.on(
+        "error",
+        (...restParams) =>
+          console.log("error", JSON.stringify(restParams)) ||
+          reject(...restParams)
+      );
       child.on("exit", code => {
         if (code !== 0) {
           reject(`storybook exited with code ${code}.`);
