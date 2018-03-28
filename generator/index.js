@@ -6,20 +6,14 @@ module.exports = api => {
     }
   });
 
-  api.render("templates/js");
+  api.render("template", {
+    hasTS: api.hasPlugin('typescript')
+  });
 
-  //   if (api.hasPlugin("typescript")) {
-  //     api.render(files => {
-  //       files["tests/unit/.eslintrc"] = JSON.stringify(
-  //         {
-  //           env: { jest: true },
-  //           rules: {
-  //             "import/no-extraneous-dependencies": "off"
-  //           }
-  //         },
-  //         null,
-  //         2
-  //       );
-  //     });
-  //   }
+  if (api.hasPlugin("typescript")) {
+    api.render(files => {
+      const storybookConfig = files["config/storybook/config.js"];
+      storybookConfig =
+    });
+  }
 };
