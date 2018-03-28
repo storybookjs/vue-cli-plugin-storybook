@@ -12,7 +12,11 @@
     "type": "git",
     "url": "git+https://github.com/almeynman/vue-cli-plugin-storybook.git"
   },
-  "keywords": ["vue", "vue-cli", "storybook"],
+  "keywords": [
+    "vue",
+    "vue-cli",
+    "storybook"
+  ],
   "author": "Almas Akchabayev <almas.akchabayev@gmail.com>",
   "license": "ISC",
   "bugs": {
@@ -32,7 +36,6 @@
     "@types/storybook__addon-notes": "^3.3.1",
     "@types/storybook__vue": "^3.3.0",
     "babel-core": "6.26.0",
-    "eslint-config-prettier": "^2.9.0",
     "storybook": "^1.0.0",
     "vue-storybook": "^0.2.0",
     "webpack-merge": "^4.1.2"
@@ -42,6 +45,7 @@
     "babel-eslint": "^8.2.1",
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.10.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^6.0.0",
     "eslint-plugin-promise": "^3.4.0",
