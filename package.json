@@ -1,0 +1,44 @@
+{
+  "name": "vue-cli-plugin-apollo",
+  "version": "0.1.0",
+  "description": "vue-cli 3 plugin to add Storybook",
+  "main": "index.js",
+  "scripts": {
+    "prepublishOnly": "npm run test",
+    "test": "npm run test:eslint",
+    "test:eslint": "eslint --ext .js ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almeynman/vue-cli-plugin-storybook.git"
+  },
+  "keywords": ["vue", "vue-cli", "apollo", "graphql"],
+  "author": "Almas Akchabayev <almas.akchabayev@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/almeynman/vue-cli-plugin-storybook/issues"
+  },
+  "homepage": "https://github.com/almeynman/vue-cli-plugin-storybook#readme",
+  "dependencies": {
+    "@storybook/addon-actions": "^3.3.15",
+    "@storybook/addon-knobs": "^3.3.15",
+    "@storybook/addon-links": "^3.3.15",
+    "@storybook/addon-notes": "^3.3.15",
+    "@storybook/addons": "^3.3.15",
+    "@storybook/vue": "^3.3.15",
+    "@types/storybook__addon-actions": "^3.0.3",
+    "@types/storybook__addon-knobs": "^3.2.3",
+    "@types/storybook__addon-links": "^3.3.0",
+    "@types/storybook__addon-notes": "^3.3.1",
+    "@types/storybook__vue": "^3.3.0",
+    "storybook": "^1.0.0",
+    "vue-storybook": "^0.2.0",
+    "webpack-merge": "^4.1.2"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "@vue/cli-shared-utils": "^3.0.0-beta.6",
+    "chalk": "^2.3.1",
+    "execa": "^0.9.0"
+  }
+}
