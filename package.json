@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/almeynman/vue-cli-plugin-storybook.git"
   },
-  "keywords": ["vue", "vue-cli", "apollo", "graphql"],
+  "keywords": ["vue", "vue-cli", "storybook"],
   "author": "Almas Akchabayev <almas.akchabayev@gmail.com>",
   "license": "ISC",
   "bugs": {
