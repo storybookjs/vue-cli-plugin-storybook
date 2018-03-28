@@ -5,7 +5,7 @@
 </template>
 
 <script>
-<%_ if (hasTS) { _%>
+<% if (hasTS) { %>
 import Vue from "vue";
 
 export default Vue.extend({
@@ -17,7 +17,7 @@ export default Vue.extend({
     }
   }
 });
-<%_ } else { _%>
+<% } else { %>
 export default {
   name: "my-button",
 
@@ -27,7 +27,7 @@ export default {
     }
   }
 };
-<%_ } _%>
+<% } %>
 </script>
 
 <style>

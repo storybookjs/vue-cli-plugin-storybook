@@ -64,15 +64,13 @@
 </template>
 
 <script>
-<%_ if (hasTS) { _%>
+<% if (hasTS) { %>
 import Vue from "vue";
-<%_ } else if (options.classComponent) { _%>
-import { Component, Prop, Vue } from "vue-property-decorator";
-<%_ } _%>
+<% } %>
 
 const log = () => console.log("Welcome to storybook!");
 
-<%_ if (hasTS) { _%>
+<% if (hasTS) { %>
 export default Vue.extend({
   name: "welcome",
 
@@ -90,7 +88,7 @@ export default Vue.extend({
     }
   }
 });
-<%_ } else{ _%>
+<% } else { %>
 export default {
   name: "welcome",
 
@@ -108,7 +106,7 @@ export default {
     }
   }
 };
-<%_ } _%>
+<% } %>
 </script>
 
 <style>
