@@ -7,13 +7,6 @@ module.exports = api => {
   });
 
   api.render("template", {
-    hasTS: api.hasPlugin('typescript')
+    hasTS: api.hasPlugin("typescript")
   });
-
-  if (api.hasPlugin("typescript")) {
-    api.render(files => {
-      const storybookConfig = files["config/storybook/config.js"];
-      storybookConfig =
-    });
-  }
 };
