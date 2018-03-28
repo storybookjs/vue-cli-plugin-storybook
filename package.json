@@ -47,10 +47,5 @@
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue": "^4.2.2"
-  },
-  "peerDependencies": {
-    "@vue/cli-shared-utils": "^3.0.0-beta.6",
-    "chalk": "^2.3.1",
-    "execa": "^0.9.0"
   }
 }
