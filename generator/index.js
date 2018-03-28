@@ -1,8 +1,8 @@
 module.exports = api => {
   api.extendPackage({
     scripts: {
-      storybook: "vue-cli-service start-storybook",
-      "build-storybook": "vue-cli-service start-storybook"
+      storybook: "start-storybook -p 6006",
+      "build-storybook": "build-storybook"
     }
   });
 
