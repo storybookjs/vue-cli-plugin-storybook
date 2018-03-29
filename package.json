@@ -13,7 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/almeynman/vue-cli-plugin-storybook.git"
   },
-  "keywords": ["vue", "vue-cli", "storybook"],
+  "keywords": [
+    "vue",
+    "vue-cli",
+    "storybook"
+  ],
   "author": "Almas Akchabayev <almas.akchabayev@gmail.com>",
   "license": "ISC",
   "bugs": {
@@ -32,7 +36,7 @@
     "@types/storybook__addon-links": "^3.3.0",
     "@types/storybook__addon-notes": "^3.3.1",
     "@types/storybook__vue": "^3.3.0",
-    "babel-core": "6.26.0",
+    "babel-core": "^7.0.0-bridge.0",
     "storybook": "^1.0.0",
     "vue-storybook": "^0.2.0",
     "webpack-merge": "^4.1.2"
