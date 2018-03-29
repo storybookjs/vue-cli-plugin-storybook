@@ -64,13 +64,13 @@
 </template>
 
 <script>
-<% if (hasTS) { %>
+<%_ if (hasTS) { _%>
 import Vue from "vue";
-<% } %>
 
+<%_ } _%>
 const log = () => console.log("Welcome to storybook!");
 
-<% if (hasTS) { %>
+<%_ if (hasTS) { _%>
 export default Vue.extend({
   name: "welcome",
 
@@ -88,7 +88,7 @@ export default Vue.extend({
     }
   }
 });
-<% } else { %>
+<%_ } else { _%>
 export default {
   name: "welcome",
 
@@ -106,7 +106,7 @@ export default {
     }
   }
 };
-<% } %>
+<%_ } _%>
 </script>
 
 <style>
