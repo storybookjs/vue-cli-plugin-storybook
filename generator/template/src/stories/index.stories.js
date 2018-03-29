@@ -17,6 +17,7 @@ storiesOf("Button", module)
     template: '<my-button @click="action">Hello Button</my-button>',
     methods: { action: action("clicked") }
   }))
+  <%_ if (!hasTS) { _%>
   .add("with JSX", () => ({
     components: { MyButton },
     render() {
@@ -24,6 +25,7 @@ storiesOf("Button", module)
     },
     methods: { action: linkTo("clicked") }
   }))
+  <%_ } _%>
   .add("with some emoji", () => ({
     components: { MyButton },
     template: '<my-button @click="action">😀 😎 👍 💯</my-button>',
