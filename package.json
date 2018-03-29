@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-storybook",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "vue-cli 3 plugin to add Storybook",
   "main": "index.js",
   "scripts": {
@@ -13,11 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/almeynman/vue-cli-plugin-storybook.git"
   },
-  "keywords": [
-    "vue",
-    "vue-cli",
-    "storybook"
-  ],
+  "keywords": ["vue", "vue-cli", "storybook"],
   "author": "Almas Akchabayev <almas.akchabayev@gmail.com>",
   "license": "ISC",
   "bugs": {
