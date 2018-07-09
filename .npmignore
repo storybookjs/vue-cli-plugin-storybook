@@ -1,5 +1,0 @@
-node_modules/
-.babelrc
-.eslintignore
-.eslintrc.js
-yarn.lock

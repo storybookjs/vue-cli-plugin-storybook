@@ -1,25 +1,26 @@
 {
   "name": "vue-cli-plugin-storybook",
-  "version": "0.1.13",
-  "description": "vue-cli 3 plugin to add Storybook",
+  "version": "0.2.0",
+  "description": "Vue CLI plugin for Storybook",
   "main": "index.js",
   "scripts": {
-    "prepublishOnly": "npm run test",
-    "test": "npm run test:eslint && npm run test:mocha",
-    "test:eslint": "eslint --ext .js .",
-    "test:mocha": "mocha"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/almeynman/vue-cli-plugin-storybook.git"
+    "url": "git+https://github.com/pksunkara/vue-cli-plugin-storybook.git"
   },
-  "keywords": ["vue", "vue-cli", "storybook"],
-  "author": "Almas Akchabayev <almas.akchabayev@gmail.com>",
-  "license": "ISC",
+  "keywords": [
+    "vue",
+    "vue-cli",
+    "storybook"
+  ],
+  "author": "Pavan Kumar Sunkara <pavan.sss1991@gmail.com> (pksunkara.github.com)",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/almeynman/vue-cli-plugin-storybook/issues"
+    "url": "https://github.com/pksunkara/vue-cli-plugin-storybook/issues"
   },
-  "homepage": "https://github.com/almeynman/vue-cli-plugin-storybook#readme",
+  "homepage": "https://github.com/pksunkara/vue-cli-plugin-storybook#readme",
   "dependencies": {
     "@storybook/addon-actions": "^3.3.15",
     "@storybook/addon-knobs": "^3.3.15",
@@ -38,18 +39,8 @@
     "webpack-merge": "^4.1.2"
   },
   "devDependencies": {
-    "babel": "^6.23.0",
-    "babel-eslint": "^8.2.1",
-    "babel-preset-env": "^1.6.1",
     "common-tags": "^1.7.2",
     "ejs": "^2.5.8",
-    "eslint": "^4.10.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^6.0.0",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "eslint-plugin-vue": "^4.2.2",
     "mocha": "^5.0.5"
   }
 }
