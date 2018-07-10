@@ -2,6 +2,7 @@ module.exports = api => {
   // TODO: Typescript support
   // TODO: Lint after generation
   // TODO: Storybook moving to babel@7
+  // TODO: Extending webpack config (Sass, Less, etc..)
 
   api.extendPackage({
     scripts: {
@@ -10,9 +11,7 @@ module.exports = api => {
     },
     "devDependencies": {
       "@storybook/addon-actions": "^4.0.0-alpha.13",
-      "@storybook/addon-knobs": "^4.0.0-alpha.13",
       "@storybook/addon-links": "^4.0.0-alpha.13",
-      "@storybook/addon-notes": "^4.0.0-alpha.13",
     },
   });
 
