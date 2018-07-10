@@ -64,31 +64,8 @@
 </template>
 
 <script>
-<%_ if (hasTS) { _%>
-import Vue from "vue";
-
-<%_ } _%>
 const log = () => console.log("Welcome to storybook!");
 
-<%_ if (hasTS) { _%>
-export default Vue.extend({
-  name: "welcome",
-
-  props: {
-    showApp: {
-      type: Function,
-      default: log
-    }
-  },
-
-  methods: {
-    onClick(event) {
-      event.preventDefault();
-      this.showApp();
-    }
-  }
-});
-<%_ } else { _%>
 export default {
   name: "welcome",
 
@@ -106,7 +83,6 @@ export default {
     }
   }
 };
-<%_ } _%>
 </script>
 
 <style>

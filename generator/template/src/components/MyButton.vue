@@ -5,19 +5,6 @@
 </template>
 
 <script>
-<%_ if (hasTS) { _%>
-import Vue from "vue";
-
-export default Vue.extend({
-  name: "my-button",
-
-  methods: {
-    onClick() {
-      this.$emit("click");
-    }
-  }
-});
-<%_ } else { _%>
 export default {
   name: "my-button",
 
@@ -27,7 +14,6 @@ export default {
     }
   }
 };
-<%_ } _%>
 </script>
 
 <style>

@@ -1,9 +1,13 @@
 module.exports = [
   {
-    type: "confirm",
-    name: "addVueStorybook",
-    message:
-      "Do you want to write stories in <story> blocks inside your .vue components?",
-    default: false
-  }
+    name: 'type',
+    type: 'list',
+    message: 'What do you want to generate?',
+    choices: [
+      {
+        name: 'Initial framework',
+        value: 'init',
+      },
+    ],
+  },
 ];
