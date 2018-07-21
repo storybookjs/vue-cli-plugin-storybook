@@ -19,9 +19,8 @@
   },
   "homepage": "https://github.com/pksunkara/vue-cli-plugin-storybook#readme",
   "dependencies": {
-    "@storybook/addons": "^4.0.0-alpha.13",
-    "@storybook/vue": "^4.0.0-alpha.13",
-    "babel-core": "^6.26.3",
-    "vue-loader": "14.2.3"
+    "@storybook/addons": "^4.0.0-alpha.14",
+    "@storybook/vue": "^4.0.0-alpha.14",
+    "babel-core": "^6.26.3"
   }
 }
