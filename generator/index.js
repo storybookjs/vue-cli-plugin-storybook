@@ -1,8 +1,6 @@
 module.exports = api => {
   // TODO: Typescript support
   // TODO: Lint after generation
-  // TODO: Storybook moving to babel@7
-  // TODO: Extending webpack config (Sass, Less, etc..)
 
   api.extendPackage({
     scripts: {

@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style>
-.button-styles {
+button {
   border: 1px solid #eee;
   border-radius: 3px;
   background-color: #ffffff;

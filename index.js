@@ -1,34 +1,35 @@
+const isEqualRegex = require('is-equal-regex');
 const server = require('@storybook/core/server');
-const VueLoaderPlugin = require.resolve('vue-loader/lib/plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
-const wrapInitialConfig = config => ({
+const wrapDefaultConfig = config => ({
   ...config,
-  plugins: [
-    ...config.plugins,
-    new VueLoaderPlugin(),
-  ],
   module: {
     ...config.module,
-    rules: [
-      ...config.module.rules,
-      {
-        test: /\.vue$/,
-        loader: require.resolve('vue-loader'),
-        options: {},
-      },
-    ],
-  },
-  resolve: {
-    ...config.resolve,
-    extensions: [...config.resolve.extensions, '.vue'],
-    alias: {
-      ...config.resolve.alias,
-      vue$: require.resolve('vue/dist/vue.esm.js'),
-    },
+    rules: config.module.rules.slice(0, -4),
   },
 });
 
 module.exports = (api, projectOptions) => {
+  const resolvedConfig = api.resolveWebpackConfig();
+
+  const wrapInitialConfig = config => ({
+    ...config,
+    plugins: [...config.plugins, new VueLoaderPlugin()],
+    module: {
+      ...config.module,
+      ...resolvedConfig.module,
+    },
+    resolve: {
+      ...resolvedConfig.resolve,
+      alias: {
+        ...resolvedConfig.resolve.alias,
+        vue$: require.resolve('vue/dist/vue.esm.js'),
+      },
+    },
+    resolveLoader: resolvedConfig.resolveLoader,
+  });
+
   api.registerCommand('storybook', {
     description: 'Start storybook',
     usage: 'vue-cli-service storybook',
@@ -50,7 +51,8 @@ module.exports = (api, projectOptions) => {
         name: '@storybook/vue',
         version: '4.0.0-alpha.14',
       },
-      wrapInitialConfig
+      wrapInitialConfig,
+      wrapDefaultConfig,
     });
   });
 
@@ -69,7 +71,8 @@ module.exports = (api, projectOptions) => {
         name: '@storybook/vue',
         version: '4.0.0-alpha.14',
       },
-      wrapInitialConfig
+      wrapInitialConfig,
+      wrapDefaultConfig,
     });
   });
 };
