@@ -8,6 +8,8 @@ Vue CLI plugin for Storybook
 $ vue add storybook
 ```
 
+<p align=center><img src=screencast.svg width=600></p>
+
 ## Usage
 
 It will create a config folder for storybook, a sample component and a sample story. The webpack config used for storybook is resolved from `vue-cli-service`, which means you don't need to have any special `webpack.config.js` in storybook config folder.
