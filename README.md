@@ -10,8 +10,7 @@ $ vue add storybook
 
 ## Usage
 
-Not working with "default (babel, eslint)" preset
-You have to choose "Manually select features" in vue-cli
+It will create a config folder for storybook, a sample component and a sample story. The webpack config used for storybook is resolved from `vue-cli-service`, which means you don't need to have any special `webpack.config.js` in storybook config folder.
 
 ## Contributors
 Here is a list of [Contributors](http://github.com/pksunkara/vue-cli-plugin-storybook/contributors)
