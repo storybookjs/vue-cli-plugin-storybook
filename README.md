@@ -1,4 +1,6 @@
 # vue-cli-plugin-storybook
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpksunkara%2Fvue-cli-plugin-storybook.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpksunkara%2Fvue-cli-plugin-storybook?ref=badge_shield)
+
 
 Vue CLI plugin for Storybook
 
@@ -25,6 +27,9 @@ __I accept pull requests and guarantee a reply back within a day__
 
 ## License
 MIT/X11
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpksunkara%2Fvue-cli-plugin-storybook.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpksunkara%2Fvue-cli-plugin-storybook?ref=badge_large)
 
 ## Bug Reports
 Report [here](http://github.com/pksunkara/vue-cli-plugin-storybook/issues). __Guaranteed reply within a day__.
