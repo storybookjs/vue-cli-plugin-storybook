@@ -1,4 +1,3 @@
-const isEqualRegex = require('is-equal-regex');
 const server = require('@storybook/core/server');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
@@ -10,6 +9,7 @@ const wrapDefaultConfig = config => ({
   },
 });
 
+// eslint-disable-next-line no-unused-vars
 module.exports = (api, projectOptions) => {
   const resolvedConfig = api.resolveWebpackConfig();
 
@@ -45,7 +45,7 @@ module.exports = (api, projectOptions) => {
       '--smoke-test': 'Exit after successful start',
       '--quiet': 'Suppress verbose build output',
     },
-  }, args => {
+  }, () => {
     server.buildDev({
       packageJson: {
         name: '@storybook/vue',
@@ -63,9 +63,9 @@ module.exports = (api, projectOptions) => {
       '-s, --static-dir <dir-names>': 'Directory where to load static files from',
       '-o, --output-dir [dir-name]': 'Directory where to store built files',
       '-c, --config-dir [dir-name]': 'Directory where to load Storybook configurations from',
-      '-w, --watch': 'Enable watch mode (default: false)'
+      '-w, --watch': 'Enable watch mode (default: false)',
     },
-  }, args => {
+  }, () => {
     server.buildStatic({
       packageJson: {
         name: '@storybook/vue',
@@ -78,5 +78,5 @@ module.exports = (api, projectOptions) => {
 };
 
 module.exports.defaultModes = {
-  'build:storybook': 'production'
+  'build:storybook': 'production',
 };
