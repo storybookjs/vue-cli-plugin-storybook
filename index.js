@@ -30,9 +30,9 @@ module.exports = (api, projectOptions) => {
     resolveLoader: resolvedConfig.resolveLoader,
   });
 
-  api.registerCommand('storybook', {
+  api.registerCommand('serve:storybook', {
     description: 'Start storybook',
-    usage: 'vue-cli-service storybook',
+    usage: 'vue-cli-service serve:storybook',
     options: {
       '-p, --port [number]': 'Port to run Storybook (required)',
       '-h, --host [string]': 'Host to run Storybook',
@@ -49,7 +49,7 @@ module.exports = (api, projectOptions) => {
     server.buildDev({
       packageJson: {
         name: '@storybook/vue',
-        version: '4.0.0-alpha.14',
+        version: '4.0.0-alpha.15',
       },
       wrapInitialConfig,
       wrapDefaultConfig,
@@ -69,7 +69,7 @@ module.exports = (api, projectOptions) => {
     server.buildStatic({
       packageJson: {
         name: '@storybook/vue',
-        version: '4.0.0-alpha.14',
+        version: '4.0.0-alpha.15',
       },
       wrapInitialConfig,
       wrapDefaultConfig,
