@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-storybook",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Vue CLI plugin for Storybook",
   "main": "index.js",
   "repository": {
@@ -19,8 +19,8 @@
   },
   "homepage": "https://github.com/pksunkara/vue-cli-plugin-storybook#readme",
   "dependencies": {
-    "@storybook/addons": "^4.0.0-alpha.15",
-    "@storybook/vue": "^4.0.0-alpha.15",
+    "@storybook/addons": "4.0.0-alpha.15",
+    "@storybook/vue": "4.0.0-alpha.14",
     "is-equal-regex": "^0.1.0"
   }
 }
