@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.4.2] - 2018-08-06
+
+### Changed
+- Upgrade storybook dependencies to alpha16
+
 ## [0.4.1] - 2018-08-05
 
 ### Changed
@@ -19,6 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - Fixed the eslint hook issue after the plugin is added
 
-[Unreleased]: https://github.com/pksunkara/vue-cli-plugin-storybook/compare/v0.4.1...HEAD
+[Unreleased]: https://github.com/pksunkara/vue-cli-plugin-storybook/compare/v0.4.2...HEAD
+[0.4.2]: https://github.com/pksunkara/vue-cli-plugin-storybook/compare/v0.4.1...v0.4.2
 [0.4.1]: https://github.com/pksunkara/vue-cli-plugin-storybook/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/pksunkara/vue-cli-plugin-storybook/compare/v0.3.0...v0.4.0
