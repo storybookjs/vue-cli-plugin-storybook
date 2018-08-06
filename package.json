@@ -20,7 +20,7 @@
   "homepage": "https://github.com/pksunkara/vue-cli-plugin-storybook#readme",
   "dependencies": {
     "@storybook/addons": "4.0.0-alpha.15",
-    "@storybook/vue": "4.0.0-alpha.14",
+    "@storybook/vue": "4.0.0-alpha.15",
     "is-equal-regex": "^0.1.0"
   }
 }
