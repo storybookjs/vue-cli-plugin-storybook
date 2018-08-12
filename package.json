@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pksunkara/vue-cli-plugin-storybook.git"
+    "url": "git+https://github.com/storybooks/vue-cli-plugin-storybook.git"
   },
   "keywords": [
     "vue",
@@ -15,9 +15,9 @@
   "author": "Pavan Kumar Sunkara <pavan.sss1991@gmail.com> (pksunkara.github.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pksunkara/vue-cli-plugin-storybook/issues"
+    "url": "https://github.com/storybooks/vue-cli-plugin-storybook/issues"
   },
-  "homepage": "https://github.com/pksunkara/vue-cli-plugin-storybook#readme",
+  "homepage": "https://github.com/storybooks/vue-cli-plugin-storybook#readme",
   "dependencies": {
     "@storybook/addons": "^4.0.0-alpha.16",
     "@storybook/vue": "^4.0.0-alpha.16",

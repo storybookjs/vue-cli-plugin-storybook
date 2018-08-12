@@ -15,9 +15,9 @@ $ vue add storybook
 It will create a config folder for storybook, a sample component and a sample story. The webpack config used for storybook is resolved from `vue-cli-service`, which means you don't need to have any special `webpack.config.js` in storybook config folder.
 
 ## Contributors
-Here is a list of [Contributors](http://github.com/pksunkara/vue-cli-plugin-storybook/contributors)
+Here is a list of [Contributors](http://github.com/storybooks/vue-cli-plugin-storybook/contributors)
 
-I particularly thank `Almas Akchabayev <almas.akchabayev@gmail.com>` for the initial code and willing to transfer the project to me.
+We particularly thank `Almas Akchabayev <almas.akchabayev@gmail.com>` for the initial code and willing to transfer the project to us.
 
 ### TODO
 
@@ -27,7 +27,7 @@ __I accept pull requests and guarantee a reply back within a day__
 MIT/X11
 
 ## Bug Reports
-Report [here](http://github.com/pksunkara/vue-cli-plugin-storybook/issues). __Guaranteed reply within a day__.
+Report [here](http://github.com/storybooks/vue-cli-plugin-storybook/issues). __Guaranteed reply within a day__.
 
 ## Contact
 Pavan Kumar Sunkara (pavan.sss1991@gmail.com)
