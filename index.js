@@ -76,7 +76,3 @@ module.exports = (api, projectOptions) => {
     });
   });
 };
-
-module.exports.defaultModes = {
-  'build:storybook': 'production',
-};
