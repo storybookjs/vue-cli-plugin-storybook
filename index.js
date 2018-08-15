@@ -1,5 +1,5 @@
 const server = require('@storybook/core/server');
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const wrapInitialConfig = require('./lib/wrapInitialConfig');
 
 const wrapDefaultConfig = config => ({
   ...config,
@@ -11,25 +11,6 @@ const wrapDefaultConfig = config => ({
 
 // eslint-disable-next-line no-unused-vars
 module.exports = (api, projectOptions) => {
-  const resolvedConfig = api.resolveWebpackConfig();
-
-  const wrapInitialConfig = config => ({
-    ...config,
-    plugins: [...config.plugins, new VueLoaderPlugin()],
-    module: {
-      ...config.module,
-      ...resolvedConfig.module,
-    },
-    resolve: {
-      ...resolvedConfig.resolve,
-      alias: {
-        ...resolvedConfig.resolve.alias,
-        vue$: require.resolve('vue/dist/vue.esm.js'),
-      },
-    },
-    resolveLoader: resolvedConfig.resolveLoader,
-  });
-
   api.registerCommand('serve:storybook', {
     description: 'Start storybook',
     usage: 'vue-cli-service serve:storybook',
@@ -49,9 +30,9 @@ module.exports = (api, projectOptions) => {
     server.buildDev({
       packageJson: {
         name: '@storybook/vue',
-        version: '4.0.0-alpha.15',
+        version: '4.0.0-alpha.16',
       },
-      wrapInitialConfig,
+      wrapInitialConfig: wrapInitialConfig(api),
       wrapDefaultConfig,
     });
   });
@@ -69,9 +50,9 @@ module.exports = (api, projectOptions) => {
     server.buildStatic({
       packageJson: {
         name: '@storybook/vue',
-        version: '4.0.0-alpha.15',
+        version: '4.0.0-alpha.16',
       },
-      wrapInitialConfig,
+      wrapInitialConfig: wrapInitialConfig(api),
       wrapDefaultConfig,
     });
   });

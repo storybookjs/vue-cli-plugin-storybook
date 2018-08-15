@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Fixed
+- Resolve webpack config of application when running the storybook command rather than loading the plugin
 - No JSX story when @vue/cli-plugin-babel is installed
 
 ## [0.4.2] - 2018-08-06
