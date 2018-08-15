@@ -1,7 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { storiesOf } from '@storybook/vue'
 import { action } from '@storybook/addon-actions'
+<%_ if (hasBabel) { _%>
 import { linkTo } from '@storybook/addon-links'
+<%_ } _%>
 
 import MyButton from '../components/MyButton.vue'
 
@@ -11,6 +13,7 @@ storiesOf('Button', module)
     template: '<my-button @click="action">Hello Button</my-button>',
     methods: { action: action('clicked') }
   }))
+  <%_ if (hasBabel) { _%>
   .add('with JSX', () => ({
     components: { MyButton },
     render() {
@@ -18,6 +21,7 @@ storiesOf('Button', module)
     },
     methods: { action: linkTo('Button', 'with some emoji') }
   }))
+  <%_ } _%>
   .add('with some emoji', () => ({
     components: { MyButton },
     template: '<my-button @click="action">😀 😎 👍 💯</my-button>',

@@ -14,5 +14,7 @@ module.exports = (api, options, rootOptions) => {
     },
   });
 
-  api.render('./template');
+  api.render('./template', {
+    hasBabel: api.hasPlugin('babel'),
+  });
 };

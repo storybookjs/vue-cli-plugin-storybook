@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+- No JSX story when @vue/cli-plugin-babel is installed
+
 ## [0.4.2] - 2018-08-06
 
 ### Changed
