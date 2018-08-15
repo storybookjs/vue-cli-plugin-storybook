@@ -1,5 +1,6 @@
 const server = require('@storybook/core/server');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const wrapDefaultConfig = config => ({
   ...config,
@@ -15,7 +16,7 @@ module.exports = (api, projectOptions) => {
 
   const wrapInitialConfig = config => ({
     ...config,
-    plugins: [...config.plugins, new VueLoaderPlugin()],
+    plugins: [...config.plugins, new VueLoaderPlugin(), new MiniCssExtractPlugin()],
     module: {
       ...config.module,
       ...resolvedConfig.module,
