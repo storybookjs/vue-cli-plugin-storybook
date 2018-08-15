@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.4.3] - 2018-08-15
+
 ### Fixed
 - Resolve webpack config of application when running the storybook command rather than loading the plugin
 - No JSX story when @vue/cli-plugin-babel is installed
@@ -28,7 +30,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - Fixed the eslint hook issue after the plugin is added
 
-[Unreleased]: https://github.com/pksunkara/vue-cli-plugin-storybook/compare/v0.4.2...HEAD
+[Unreleased]: https://github.com/pksunkara/vue-cli-plugin-storybook/compare/v0.4.3...HEAD
+[0.4.3]: https://github.com/pksunkara/vue-cli-plugin-storybook/compare/v0.4.2...v0.4.3
 [0.4.2]: https://github.com/pksunkara/vue-cli-plugin-storybook/compare/v0.4.1...v0.4.2
 [0.4.1]: https://github.com/pksunkara/vue-cli-plugin-storybook/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/pksunkara/vue-cli-plugin-storybook/compare/v0.3.0...v0.4.0
