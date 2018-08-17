@@ -6,8 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.4.4] - 2018-08-16
+
 ### Changed
 - Lint fix the generated files
+- Use vue app's webpack plugins for building storybook
 
 ## [0.4.3] - 2018-08-15
 
