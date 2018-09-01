@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 const server = require('@storybook/core/server');
 const wrapInitialConfig = require('./lib/wrapInitialConfig');
 
@@ -30,7 +31,7 @@ module.exports = (api, projectOptions) => {
     server.buildDev({
       packageJson: {
         name: '@storybook/vue',
-        version: '4.0.0-alpha.16',
+        version: '4.0.0-alpha.20',
       },
       wrapInitialConfig: wrapInitialConfig(api),
       wrapDefaultConfig,
@@ -50,7 +51,7 @@ module.exports = (api, projectOptions) => {
     server.buildStatic({
       packageJson: {
         name: '@storybook/vue',
-        version: '4.0.0-alpha.16',
+        version: '4.0.0-alpha.20',
       },
       wrapInitialConfig: wrapInitialConfig(api),
       wrapDefaultConfig,

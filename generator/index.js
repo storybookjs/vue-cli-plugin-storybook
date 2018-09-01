@@ -8,8 +8,8 @@ module.exports = (api, options, rootOptions) => {
       'build:storybook': 'vue-cli-service build:storybook -c config/storybook',
     },
     devDependencies: {
-      '@storybook/addon-actions': '^4.0.0-alpha.16',
-      '@storybook/addon-links': '^4.0.0-alpha.16',
+      '@storybook/addon-actions': '^4.0.0-alpha.20',
+      '@storybook/addon-links': '^4.0.0-alpha.20',
     },
   });
 
@@ -21,6 +21,7 @@ module.exports = (api, options, rootOptions) => {
   api.onCreateComplete(() => {
     // Linting the generated files
     if (api.hasPlugin('eslint')) {
+      // eslint-disable-next-line global-require, import/no-unresolved
       const lint = require('@vue/cli-plugin-eslint/lint');
       lint({ silent: true }, api);
     }
