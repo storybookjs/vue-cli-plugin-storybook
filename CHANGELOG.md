@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.4.7] (2018-09-05)
+
+### Bug Fixes
+* Whitelist the plugins coming from vue config instead of blacklisting
+
 ## [0.4.6] (2018-09-01)
 
 ### Bug Fixes
@@ -40,6 +45,7 @@
 ### Bug Fixes
 * Fixed the eslint hook issue after the plugin is added
 
+[0.4.7]: https://github.com/pksunkara/vue-cli-plugin-storybook/compare/v0.4.6...v0.4.7
 [0.4.6]: https://github.com/pksunkara/vue-cli-plugin-storybook/compare/v0.4.5...v0.4.6
 [0.4.5]: https://github.com/pksunkara/vue-cli-plugin-storybook/compare/v0.4.4...v0.4.5
 [0.4.4]: https://github.com/pksunkara/vue-cli-plugin-storybook/compare/v0.4.3...v0.4.4
