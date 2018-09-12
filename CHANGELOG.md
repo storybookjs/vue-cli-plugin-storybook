@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.4.8] (2018-09-12)
+
+### Bug Fixes
+* Pin storybook to alpha20
+
 ## [0.4.7] (2018-09-05)
 
 ### Bug Fixes

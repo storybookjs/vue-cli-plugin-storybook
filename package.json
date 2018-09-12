@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-storybook",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "description": "Vue CLI plugin for Storybook",
   "main": "index.js",
   "scripts": {
@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/storybooks/vue-cli-plugin-storybook#readme",
   "dependencies": {
-    "@storybook/addons": "^4.0.0-alpha.20",
-    "@storybook/vue": "^4.0.0-alpha.20"
+    "@storybook/addons": "4.0.0-alpha.20",
+    "@storybook/vue": "4.0.0-alpha.20"
   },
   "devDependencies": {
     "eslint": "^5.4.0",
