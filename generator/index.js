@@ -8,8 +8,8 @@ module.exports = (api, options, rootOptions) => {
       'storybook:build': 'vue-cli-service storybook:build -c config/storybook',
     },
     devDependencies: {
-      '@storybook/addon-actions': '4.0.0-alpha.20',
-      '@storybook/addon-links': '4.0.0-alpha.20',
+      '@storybook/addon-actions': '^4.1.0',
+      '@storybook/addon-links': '^4.1.0',
     },
   });
 

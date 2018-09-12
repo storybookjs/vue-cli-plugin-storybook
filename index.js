@@ -1,14 +1,13 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const server = require('@storybook/core/server');
-const wrapInitialConfig = require('./lib/wrapInitialConfig');
 
-const wrapDefaultConfig = config => ({
-  ...config,
-  module: {
-    ...config.module,
-    rules: config.module.rules.slice(0, -4),
-  },
-});
+// const wrapDefaultConfig = config => ({
+//   ...config,
+//   module: {
+//     ...config.module,
+//     rules: config.module.rules.slice(0, -4),
+//   },
+// });
 
 const defaultOptions = {
   allowedPlugins: [],
@@ -37,10 +36,14 @@ module.exports = (api, { pluginOptions = {} }) => {
     server.buildDev({
       packageJson: {
         name: '@storybook/vue',
-        version: '4.0.0-alpha.20',
+        version: '^4.1.0',
       },
-      wrapInitialConfig: wrapInitialConfig(api, options),
-      wrapDefaultConfig,
+      frameworkPresets: [
+        {
+          preset: require.resolve('./preset'),
+          options: { api, options },
+        },
+      ],
     });
   });
 
@@ -57,10 +60,14 @@ module.exports = (api, { pluginOptions = {} }) => {
     server.buildStatic({
       packageJson: {
         name: '@storybook/vue',
-        version: '4.0.0-alpha.20',
+        version: '^4.1.0',
       },
-      wrapInitialConfig: wrapInitialConfig(api, options),
-      wrapDefaultConfig,
+      frameworkPresets: [
+        {
+          preset: require.resolve('./preset'),
+          options: { api, options },
+        },
+      ],
     });
   });
 };
