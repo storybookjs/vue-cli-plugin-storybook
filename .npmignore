@@ -1,0 +1,5 @@
+test
+.eslintrc
+.eslintignore
+tmp
+*.tgz
