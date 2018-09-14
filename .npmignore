@@ -1,5 +1,6 @@
-test
+.circleci
 .eslintrc
 .eslintignore
+test
 tmp
 *.tgz

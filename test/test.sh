@@ -1,8 +1,9 @@
 #!/#!/usr/bin/env bash
 
+rm -rf tmp
 npm pack .
-vue create --preset test/preset.json tmp
+npx vue create --preset test/preset.json tmp
 cd tmp
 npm i ../*.tgz
-vue invoke storybook --type init
-npm run serve:storybook
+npx vue invoke storybook --type init
+npm run build:storybook
