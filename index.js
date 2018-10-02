@@ -10,8 +10,12 @@ const wrapDefaultConfig = config => ({
   },
 });
 
+const defaultOptions = {};
+
 // eslint-disable-next-line no-unused-vars
-module.exports = (api, projectOptions) => {
+module.exports = (api, { pluginOptions = {} }) => {
+  const options = Object.assign({}, defaultOptions, pluginOptions.storybook);
+
   api.registerCommand('serve:storybook', {
     description: 'Start storybook',
     usage: 'vue-cli-service serve:storybook',
