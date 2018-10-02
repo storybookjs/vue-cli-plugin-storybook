@@ -10,8 +10,14 @@ const wrapDefaultConfig = config => ({
   },
 });
 
+const defaultOptions = {
+  allowedPlugins: [],
+};
+
 // eslint-disable-next-line no-unused-vars
-module.exports = (api, projectOptions) => {
+module.exports = (api, { pluginOptions = {} }) => {
+  const options = Object.assign({}, defaultOptions, pluginOptions.storybook);
+
   api.registerCommand('serve:storybook', {
     description: 'Start storybook',
     usage: 'vue-cli-service serve:storybook',
@@ -33,7 +39,7 @@ module.exports = (api, projectOptions) => {
         name: '@storybook/vue',
         version: '4.0.0-alpha.20',
       },
-      wrapInitialConfig: wrapInitialConfig(api),
+      wrapInitialConfig: wrapInitialConfig(api, options),
       wrapDefaultConfig,
     });
   });
@@ -53,7 +59,7 @@ module.exports = (api, projectOptions) => {
         name: '@storybook/vue',
         version: '4.0.0-alpha.20',
       },
-      wrapInitialConfig: wrapInitialConfig(api),
+      wrapInitialConfig: wrapInitialConfig(api, options),
       wrapDefaultConfig,
     });
   });
