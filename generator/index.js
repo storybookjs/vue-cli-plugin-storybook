@@ -11,6 +11,9 @@ module.exports = (api, options, rootOptions) => {
       '@storybook/addon-actions': '4.0.0-alpha.20',
       '@storybook/addon-links': '4.0.0-alpha.20',
     },
+    dependencies: {
+      'babel-loader': '^8.0.4',
+    },
   });
 
   api.render('./template', {
