@@ -18,9 +18,9 @@ const defaultOptions = {
 module.exports = (api, { pluginOptions = {} }) => {
   const options = Object.assign({}, defaultOptions, pluginOptions.storybook);
 
-  api.registerCommand('serve:storybook', {
+  api.registerCommand('storybook:serve', {
     description: 'Start storybook',
-    usage: 'vue-cli-service serve:storybook',
+    usage: 'vue-cli-service storybook:serve',
     options: {
       '-p, --port [number]': 'Port to run Storybook (required)',
       '-h, --host [string]': 'Host to run Storybook',
@@ -44,9 +44,9 @@ module.exports = (api, { pluginOptions = {} }) => {
     });
   });
 
-  api.registerCommand('build:storybook', {
+  api.registerCommand('storybook:build', {
     description: 'Build storybook',
-    usage: 'vue-cli-service build:storybook',
+    usage: 'vue-cli-service storybook:build',
     options: {
       '-s, --static-dir <dir-names>': 'Directory where to load static files from',
       '-o, --output-dir [dir-name]': 'Directory where to store built files',
@@ -66,5 +66,5 @@ module.exports = (api, { pluginOptions = {} }) => {
 };
 
 module.exports.defaultModes = {
-  'build:storybook': 'production',
+  'storybook:build': 'production',
 };

@@ -4,8 +4,8 @@ module.exports = (api, options, rootOptions) => {
 
   api.extendPackage({
     scripts: {
-      'serve:storybook': 'vue-cli-service serve:storybook -p 6006 -c config/storybook',
-      'build:storybook': 'vue-cli-service build:storybook -c config/storybook',
+      'storybook:serve': 'vue-cli-service storybook:serve -p 6006 -c config/storybook',
+      'storybook:build': 'vue-cli-service storybook:build -c config/storybook',
     },
     devDependencies: {
       '@storybook/addon-actions': '4.0.0-alpha.20',
