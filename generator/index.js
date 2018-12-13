@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 module.exports = (api, options, rootOptions) => {
   // TODO: Typescript support
+  const hasBabel = api.hasPlugin('babel');
 
   api.extendPackage({
     scripts: {
@@ -13,9 +14,15 @@ module.exports = (api, options, rootOptions) => {
     },
   });
 
-  api.render('./template', {
-    hasBabel: api.hasPlugin('babel'),
-  });
+  if (!hasBabel) {
+    api.extendPackage({
+      devDependencies: {
+        'babel-loader': '^8.0.4',
+      },
+    });
+  }
+
+  api.render('./template', { hasBabel });
 
   // FIXME: Exists until https://github.com/vuejs/vue-cli/issues/1754 is done
   api.onCreateComplete(() => {
