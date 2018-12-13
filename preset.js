@@ -36,4 +36,11 @@ module.exports = {
       resolveLoader: resolvedConfig.resolveLoader,
     };
   },
+  webpackFinal: config => ({
+    ...config,
+    module: {
+      ...config.module,
+      rules: config.module.rules.slice(0, -3),
+    },
+  }),
 };

@@ -1,14 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const server = require('@storybook/core/server');
 
-// const wrapDefaultConfig = config => ({
-//   ...config,
-//   module: {
-//     ...config.module,
-//     rules: config.module.rules.slice(0, -4),
-//   },
-// });
-
 const defaultOptions = {
   allowedPlugins: [],
 };
