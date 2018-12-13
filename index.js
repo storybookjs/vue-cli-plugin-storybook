@@ -40,7 +40,7 @@ module.exports = (api, { pluginOptions = {} }) => {
       },
       frameworkPresets: [
         {
-          preset: require.resolve('./preset'),
+          name: require.resolve('./preset'),
           options: { api, options },
         },
       ],
@@ -64,7 +64,7 @@ module.exports = (api, { pluginOptions = {} }) => {
       },
       frameworkPresets: [
         {
-          preset: require.resolve('./preset'),
+          name: require.resolve('./preset'),
           options: { api, options },
         },
       ],
