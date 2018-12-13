@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.5.0
+
+### Breaking
+* Changed the commands in to `storybook:serve` and `storybook:build`
+
+### Enhancements
+* Upgraded storybook dependencies to ^4.1.0
+* Allow customization of plugins that can be whitelisted
+
+### Bug Fixes
+* Add babel-loader needed by storybook to vue project if it doesn't use babel at all
+
 ## [0.4.8] (2018-09-12)
 
 ### Bug Fixes
