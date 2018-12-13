@@ -40,6 +40,8 @@ module.exports = {
     ...config,
     module: {
       ...config.module,
+      // Remove duplicate rules added by storybook
+      // https://github.com/storybooks/storybook/blob/v4.1.0/lib/core/src/server/preview/base-webpack.config.js
       rules: config.module.rules.slice(0, -3),
     },
   }),
