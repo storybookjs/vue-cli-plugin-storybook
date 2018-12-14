@@ -10,7 +10,9 @@ module.exports = (api, options, rootOptions) => {
     },
     devDependencies: {
       '@storybook/addon-actions': '^4.1.0',
+      '@storybook/addon-knobs': '^4.1.0',
       '@storybook/addon-links': '^4.1.0',
+      '@storybook/addon-notes': '^4.1.0',
     },
   });
 
