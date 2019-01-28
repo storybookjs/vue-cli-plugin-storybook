@@ -17,12 +17,11 @@ module.exports = {
       }
     });
 
-    const resolvedChain = chainConfig.toConfig();
-    const webpackConfig = api.resolveWebpackConfig();
+    const webpackConfig = api.resolveWebpackConfig(chainConfig);
 
     return {
       ...config,
-      plugins: [...config.plugins, ...resolvedChain.plugins],
+      plugins: [...config.plugins, ...webpackConfig.plugins],
       module: {
         ...config.module,
         ...webpackConfig.module,
@@ -34,7 +33,7 @@ module.exports = {
           vue$: require.resolve('vue/dist/vue.esm.js'),
         },
       },
-      resolveLoader: resolvedChain.resolveLoader,
+      resolveLoader: webpackConfig.resolveLoader,
     };
   },
   webpackFinal: config => ({
