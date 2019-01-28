@@ -1,7 +1,7 @@
 module.exports = {
   webpack: (config, { api, options }) => {
-    const chainConfig = api.resolveChainableWebpackConfig();
-    const existingPlugins = chainConfig.plugins.values().map(item => item.name);
+    const chainableConfig = api.resolveChainableWebpackConfig();
+    const existingPlugins = chainableConfig.plugins.values().map(item => item.name);
     const allowedPlugins = [
       'vue-loader',
       'friendly-errors',
@@ -13,11 +13,11 @@ module.exports = {
 
     existingPlugins.forEach((plugin) => {
       if (!allowedPlugins.includes(plugin) && !options.allowedPlugins.includes(plugin)) {
-        chainConfig.plugins.delete(plugin);
+        chainableConfig.plugins.delete(plugin);
       }
     });
 
-    const webpackConfig = api.resolveWebpackConfig(chainConfig);
+    const webpackConfig = api.resolveWebpackConfig(chainableConfig);
 
     return {
       ...config,
