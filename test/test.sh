@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# TODO the tests should verify how the webpack configs are merged
+
 rm -rf tmp
 npm pack .
 npx vue create --preset test/preset.json tmp
