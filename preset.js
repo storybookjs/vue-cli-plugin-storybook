@@ -1,7 +1,7 @@
 module.exports = {
   webpack: (config, { api, options }) => {
-    const chain = api.resolveChainableWebpackConfig();
-    const existingPlugins = chain.plugins.values().map(item => item.name);
+    const chainableConfig = api.resolveChainableWebpackConfig();
+    const existingPlugins = chainableConfig.plugins.values().map(item => item.name);
     const allowedPlugins = [
       'vue-loader',
       'friendly-errors',
@@ -13,27 +13,27 @@ module.exports = {
 
     existingPlugins.forEach((plugin) => {
       if (!allowedPlugins.includes(plugin) && !options.allowedPlugins.includes(plugin)) {
-        chain.plugins.delete(plugin);
+        chainableConfig.plugins.delete(plugin);
       }
     });
 
-    const resolvedConfig = chain.toConfig();
+    const webpackConfig = api.resolveWebpackConfig(chainableConfig);
 
     return {
       ...config,
-      plugins: [...config.plugins, ...resolvedConfig.plugins],
+      plugins: [...config.plugins, ...webpackConfig.plugins],
       module: {
         ...config.module,
-        ...resolvedConfig.module,
+        ...webpackConfig.module,
       },
       resolve: {
-        ...resolvedConfig.resolve,
+        ...webpackConfig.resolve,
         alias: {
-          ...resolvedConfig.resolve.alias,
+          ...webpackConfig.resolve && webpackConfig.resolve.alias,
           vue$: require.resolve('vue/dist/vue.esm.js'),
         },
       },
-      resolveLoader: resolvedConfig.resolveLoader,
+      resolveLoader: webpackConfig.resolveLoader,
     };
   },
   webpackFinal: config => ({

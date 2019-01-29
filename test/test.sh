@@ -1,4 +1,6 @@
-#!/#!/usr/bin/env bash
+#!/usr/bin/env bash
+
+# TODO the tests should verify how the webpack configs are merged
 
 rm -rf tmp
 npm pack .
