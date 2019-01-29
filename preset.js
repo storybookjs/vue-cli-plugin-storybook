@@ -29,7 +29,7 @@ module.exports = {
       resolve: {
         ...webpackConfig.resolve,
         alias: {
-          ...webpackConfig.resolve.alias,
+          ...webpackConfig.resolve && webpackConfig.resolve.alias,
           vue$: require.resolve('vue/dist/vue.esm.js'),
         },
       },
