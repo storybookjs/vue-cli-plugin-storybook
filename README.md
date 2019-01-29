@@ -28,7 +28,7 @@ However, storybook will filter all the plugins for webpack according to internal
 }
 ```
 
-Note that only plugins defined with [webpack-chain](https://cli.vuejs.org/guide/webpack.html#chaining-advanced) config can be used in storybook.
+Note that only plugins defined with [webpack-chain](https://cli.vuejs.org/guide/webpack.html#chaining-advanced) config can be filtered using the `allowedPlugins` option. Plugings defined through `configureWebpack` will always be included in the final webpack config.
 
 ## Contributors
 Here is a list of [Contributors](http://github.com/storybooks/vue-cli-plugin-storybook/contributors)
