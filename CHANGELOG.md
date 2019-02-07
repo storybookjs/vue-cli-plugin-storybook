@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.1
+
+### Bug Fixes
+* Allow support for vue-cli's configureWebpack
+
 ## 0.5.0
 
 ### Breaking
