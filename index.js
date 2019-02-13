@@ -1,5 +1,11 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const server = require('@storybook/core/server');
+const {
+  devOptions,
+  prodOptions,
+  generateVueCliOptions,
+  generateCommanderProgram,
+} = require('./options');
 
 const defaultOptions = {
   allowedPlugins: [],
@@ -12,19 +18,8 @@ module.exports = (api, { pluginOptions = {} }) => {
   api.registerCommand('storybook:serve', {
     description: 'Start storybook',
     usage: 'vue-cli-service storybook:serve',
-    options: {
-      '-p, --port [number]': 'Port to run Storybook (required)',
-      '-h, --host [string]': 'Host to run Storybook',
-      '-s, --static-dir <dir-names>': 'Directory where to load static files from',
-      '-c, --config-dir [dir-name]': 'Directory where to load Storybook configurations from',
-      '--https': 'Serve Storybook over HTTPS. Note: You must provide your own certificate information.',
-      '--ssl-ca <ca>': 'Provide an SSL certificate authority. (Optional with --https, required if using a self-signed certificate)',
-      '--ssl-cert <cert>': 'Provide an SSL certificate. (Required with --https)',
-      '--ssl-key <key>': 'Provide an SSL key. (Required with --https)',
-      '--smoke-test': 'Exit after successful start',
-      '--quiet': 'Suppress verbose build output',
-    },
-  }, () => {
+    options: generateVueCliOptions(devOptions),
+  }, (_, argv) => {
     server.buildDev({
       packageJson: {
         name: '@storybook/vue',
@@ -36,19 +31,15 @@ module.exports = (api, { pluginOptions = {} }) => {
           options: { api, options },
         },
       ],
+      ...generateCommanderProgram(argv, devOptions),
     });
   });
 
   api.registerCommand('storybook:build', {
     description: 'Build storybook',
     usage: 'vue-cli-service storybook:build',
-    options: {
-      '-s, --static-dir <dir-names>': 'Directory where to load static files from',
-      '-o, --output-dir [dir-name]': 'Directory where to store built files',
-      '-c, --config-dir [dir-name]': 'Directory where to load Storybook configurations from',
-      '-w, --watch': 'Enable watch mode (default: false)',
-    },
-  }, () => {
+    options: generateVueCliOptions(prodOptions),
+  }, (_, argv) => {
     server.buildStatic({
       packageJson: {
         name: '@storybook/vue',
@@ -60,6 +51,7 @@ module.exports = (api, { pluginOptions = {} }) => {
           options: { api, options },
         },
       ],
+      ...generateCommanderProgram(argv, prodOptions),
     });
   });
 };
