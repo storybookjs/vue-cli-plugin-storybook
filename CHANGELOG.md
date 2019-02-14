@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.2
+
+### Enhancements
+* Allow the storybook plugin to take storybook options
+
 ## 0.5.1
 
 ### Bug Fixes
