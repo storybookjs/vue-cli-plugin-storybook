@@ -21,10 +21,7 @@ module.exports = (api, { pluginOptions = {} }) => {
     options: generateVueCliOptions(devOptions),
   }, (_, argv) => {
     server.buildDev({
-      packageJson: {
-        name: '@storybook/vue',
-        version: '^4.1.0',
-      },
+      packageJson: require('@storybook/vue/package.json'),
       frameworkPresets: [
         {
           name: require.resolve('./preset'),
@@ -41,10 +38,7 @@ module.exports = (api, { pluginOptions = {} }) => {
     options: generateVueCliOptions(prodOptions),
   }, (_, argv) => {
     server.buildStatic({
-      packageJson: {
-        name: '@storybook/vue',
-        version: '^4.1.0',
-      },
+      packageJson: require('@storybook/vue/package.json'),
       frameworkPresets: [
         {
           name: require.resolve('./preset'),
