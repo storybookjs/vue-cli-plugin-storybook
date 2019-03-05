@@ -4,29 +4,32 @@ function parseList(str) {
   return str.split(',');
 }
 
+const sharedOptions = [
+  ['-s, --static-dir <dir-names>', 'Directory where to load static files from', parseList],
+  ['-c, --config-dir [dir-name]', 'Directory where to load Storybook configurations from'],
+  ['--quiet', 'Suppress verbose build output'],
+];
+
 // Parsed from storybook repo.
 // tags/v4.1.4: storybook/lib/core/src/server/cli/prod.js
 const prodOptions = [
-  ['-s, --static-dir <dir-names>', 'Directory where to load static files from', parseList],
+  ...sharedOptions,
   ['-o, --output-dir [dir-name]', 'Directory where to store built files'],
-  ['-c, --config-dir [dir-name]', 'Directory where to load Storybook configurations from'],
   ['-w, --watch', 'Enable watch mode'],
 ];
 
 // Parsed from storybook repo.
 // tags/v4.1.4: storybook/lib/core/src/server/cli/dev.js
 const devOptions = [
+  ...sharedOptions,
   ['-p, --port [number]', 'Port to run Storybook', str => parseInt(str, 10)],
   ['-h, --host [string]', 'Host to run Storybook'],
-  ['-s, --static-dir <dir-names>', 'Directory where to load static files from', parseList],
-  ['-c, --config-dir [dir-name]', 'Directory where to load Storybook configurations from'],
   ['--https', 'Serve Storybook over HTTPS. Note: You must provide your own certificate information.'],
   ['--ssl-ca <ca>', 'Provide an SSL certificate authority. (Optional with --https, required if using a self-signed certificate)', parseList],
   ['--ssl-cert <cert>', 'Provide an SSL certificate. (Required with --https)'],
   ['--ssl-key <key>', 'Provide an SSL key. (Required with --https)'],
   ['--smoke-test', 'Exit after successful start'],
   ['--ci', "CI mode (skip interactive prompts, don't open browser"],
-  ['--quiet', 'Suppress verbose build output'],
 ];
 
 const generateVueCliOptions = options => options.reduce(
