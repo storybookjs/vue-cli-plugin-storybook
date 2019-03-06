@@ -11,7 +11,6 @@ const defaultOptions = {
   allowedPlugins: [],
 };
 
-// eslint-disable-next-line no-unused-vars
 module.exports = (api, { pluginOptions = {} }) => {
   const options = Object.assign({}, defaultOptions, pluginOptions.storybook);
 
@@ -21,6 +20,7 @@ module.exports = (api, { pluginOptions = {} }) => {
     options: generateVueCliOptions(devOptions),
   }, (_, argv) => {
     server.buildDev({
+      // eslint-disable-next-line global-require
       packageJson: require('@storybook/vue/package.json'),
       frameworkPresets: [
         {
@@ -38,6 +38,7 @@ module.exports = (api, { pluginOptions = {} }) => {
     options: generateVueCliOptions(prodOptions),
   }, (_, argv) => {
     server.buildStatic({
+      // eslint-disable-next-line global-require
       packageJson: require('@storybook/vue/package.json'),
       frameworkPresets: [
         {
