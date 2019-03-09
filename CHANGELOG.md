@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.0
+
+### Enhancements
+* Allow support for storybook 5
+
 ## 0.5.2
 
 ### Enhancements
