@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.1
+
+### Bug Fixes
+* Fix bug with addon versions not being updated in the previous version
+
 ## 0.6.0
 
 ### Enhancements
