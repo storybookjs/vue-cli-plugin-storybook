@@ -60,4 +60,7 @@ typings/
 # next.js build output
 .next
 
+# Storybook static build directory
+storybook-static
+
 tmp
