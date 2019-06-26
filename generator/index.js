@@ -19,6 +19,7 @@ module.exports = (api, options, rootOptions) => {
   if (!hasBabel) {
     api.extendPackage({
       devDependencies: {
+        '@babel/core': '^7.4.5',
         'babel-loader': '^8.0.4',
       },
     });
