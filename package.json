@@ -28,7 +28,7 @@
     "commander": "^2.19.0"
   },
   "devDependencies": {
-    "@vue/cli": "^3.2.0",
+    "@vue/cli": "^4",
     "eslint": "^5.10.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0"

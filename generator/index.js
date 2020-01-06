@@ -1,5 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 module.exports = (api, options, rootOptions) => {
+  api.assertCliVersion('^4');
+
   // TODO: Typescript support
   const hasBabel = api.hasPlugin('babel');
 
@@ -26,14 +28,4 @@ module.exports = (api, options, rootOptions) => {
   }
 
   api.render('./template', { hasBabel });
-
-  // FIXME: Exists until https://github.com/vuejs/vue-cli/issues/1754 is done
-  api.onCreateComplete(() => {
-    // Linting the generated files
-    if (api.hasPlugin('eslint')) {
-      // eslint-disable-next-line global-require, import/no-unresolved
-      const lint = require('@vue/cli-plugin-eslint/lint');
-      lint({ silent: true }, api);
-    }
-  });
 };
