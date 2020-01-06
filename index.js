@@ -1,5 +1,6 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
+// eslint-disable-next-line import/no-unresolved
 const server = require('@storybook/core/server');
+// eslint-disable-next-line import/no-unresolved
 const packageJson = require('@storybook/vue/package.json');
 const {
   devOptions,
@@ -13,7 +14,7 @@ const defaultOptions = {
 };
 
 module.exports = (api, { pluginOptions = {} }) => {
-  const options = Object.assign({}, defaultOptions, pluginOptions.storybook);
+  const options = { ...defaultOptions, ...pluginOptions.storybook };
 
   api.registerCommand('storybook:serve', {
     description: 'Start storybook',
@@ -21,7 +22,6 @@ module.exports = (api, { pluginOptions = {} }) => {
     options: generateVueCliOptions(devOptions),
   }, (_, argv) => {
     server.buildDev({
-      // eslint-disable-next-line global-require
       packageJson,
       frameworkPresets: [
         {
@@ -39,7 +39,6 @@ module.exports = (api, { pluginOptions = {} }) => {
     options: generateVueCliOptions(prodOptions),
   }, (_, argv) => {
     server.buildStatic({
-      // eslint-disable-next-line global-require
       packageJson,
       frameworkPresets: [
         {

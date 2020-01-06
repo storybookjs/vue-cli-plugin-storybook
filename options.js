@@ -22,7 +22,7 @@ const prodOptions = [
 // tags/v4.1.4: storybook/lib/core/src/server/cli/dev.js
 const devOptions = [
   ...sharedOptions,
-  ['-p, --port [number]', 'Port to run Storybook', str => parseInt(str, 10)],
+  ['-p, --port [number]', 'Port to run Storybook', (str) => parseInt(str, 10)],
   ['-h, --host [string]', 'Host to run Storybook'],
   ['--https', 'Serve Storybook over HTTPS. Note: You must provide your own certificate information.'],
   ['--ssl-ca <ca>', 'Provide an SSL certificate authority. (Optional with --https, required if using a self-signed certificate)', parseList],
@@ -32,7 +32,7 @@ const devOptions = [
   ['--ci', "CI mode (skip interactive prompts, don't open browser"],
 ];
 
-const generateVueCliOptions = options => options.reduce(
+const generateVueCliOptions = (options) => options.reduce(
   (vueCliOptions, [arg, desc]) => ({ ...vueCliOptions, [arg]: desc }),
   {},
 );

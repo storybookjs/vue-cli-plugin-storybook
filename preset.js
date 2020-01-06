@@ -1,7 +1,7 @@
 module.exports = {
   webpack: (config, { api, options }) => {
     const chainableConfig = api.resolveChainableWebpackConfig();
-    const existingPlugins = chainableConfig.plugins.values().map(item => item.name);
+    const existingPlugins = chainableConfig.plugins.values().map((item) => item.name);
     const allowedPlugins = [
       'vue-loader',
       'friendly-errors',
@@ -36,7 +36,7 @@ module.exports = {
       resolveLoader: webpackConfig.resolveLoader,
     };
   },
-  webpackFinal: config => ({
+  webpackFinal: (config) => ({
     ...config,
     module: {
       ...config.module,
