@@ -1,5 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 const server = require('@storybook/core/server');
+const packageJson = require('@storybook/vue/package.json');
 const {
   devOptions,
   prodOptions,
@@ -21,7 +22,7 @@ module.exports = (api, { pluginOptions = {} }) => {
   }, (_, argv) => {
     server.buildDev({
       // eslint-disable-next-line global-require
-      packageJson: require('@storybook/vue/package.json'),
+      packageJson,
       frameworkPresets: [
         {
           name: require.resolve('./preset'),
@@ -39,7 +40,7 @@ module.exports = (api, { pluginOptions = {} }) => {
   }, (_, argv) => {
     server.buildStatic({
       // eslint-disable-next-line global-require
-      packageJson: require('@storybook/vue/package.json'),
+      packageJson,
       frameworkPresets: [
         {
           name: require.resolve('./preset'),

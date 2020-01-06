@@ -1,3 +1,6 @@
+const semver = require('semver');
+const chalk = require('chalk');
+
 module.exports = [
   {
     name: 'type',
@@ -9,5 +12,12 @@ module.exports = [
         value: 'init',
       },
     ],
+  },
+  {
+    when: answers => answers.type === 'init',
+    name: 'version',
+    type: 'input',
+    message: `What storybook version do you want? ${chalk.yellow('(Please specify semver range)')}`,
+    validate: input => (semver.validRange(input) ? true : 'Given semver range is not valid.'),
   },
 ];
