@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.0
+
+### Enhancements
+* Now asks the user what storybook version they want to install during init
+
+### Breaking
+* `@storybook/vue` is now a required peer dependency instead of direct
+
 ## 0.6.1
 
 ### Bug Fixes

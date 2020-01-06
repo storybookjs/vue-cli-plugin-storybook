@@ -2,7 +2,7 @@
   "name": "vue-cli-plugin-storybook",
   "version": "0.6.1",
   "description": "Vue CLI plugin for Storybook",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "bash test/test.sh",
     "lint": "eslint ."
