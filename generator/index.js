@@ -3,6 +3,7 @@ module.exports = (api, options, rootOptions) => {
   api.assertCliVersion('^4');
 
   // TODO: Typescript support
+  const hasTS = api.hasPlugin('typescript');
   const hasBabel = api.hasPlugin('babel');
 
   api.extendPackage({

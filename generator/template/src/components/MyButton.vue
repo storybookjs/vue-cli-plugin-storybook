@@ -4,7 +4,11 @@
   </button>
 </template>
 
+<%_ if (hasTS) { _%>
+<script lang="ts">
+<%_ } else { _%>
 <script>
+<%_ } _%>
 export default {
   name: 'my-button',
 
