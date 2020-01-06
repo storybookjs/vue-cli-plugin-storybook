@@ -16,7 +16,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 button {
   border: 1px solid #eee;
   border-radius: 3px;
