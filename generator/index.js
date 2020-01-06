@@ -29,5 +29,5 @@ module.exports = (api, options, rootOptions) => {
     });
   }
 
-  api.render('./template', { hasBabel });
+  api.render('./template', { hasTS, hasBabel });
 };
