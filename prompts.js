@@ -15,7 +15,7 @@ module.exports = [
   },
   {
     when: (answers) => answers.type === 'init',
-    name: 'version',
+    name: 'semver',
     type: 'input',
     default: '>=4.1.0',
     message: `What storybook version do you want? ${chalk.yellow('(Please specify semver range)')}`,

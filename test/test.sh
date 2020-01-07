@@ -7,7 +7,7 @@ npm pack .
 npx vue create --preset test/preset.json tmp
 cd tmp
 npm i ../*.tgz
-npx vue invoke storybook --type init
+npx vue invoke storybook --type init --semver '>=4.1.0'
 npm i
 npm i --save-dev storybook-chromatic
 echo "import 'storybook-chromatic'" > config/storybook/chromatic.js
