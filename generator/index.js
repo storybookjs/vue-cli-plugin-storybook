@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 module.exports = (api, options, rootOptions) => {
-  api.assertCliVersion('^4');
+  api.assertCliVersion('>=4');
 
   // TODO: Typescript support
   const hasTS = api.hasPlugin('typescript');
