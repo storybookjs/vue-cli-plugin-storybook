@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0
+
+### Enhancements
+* Support storybook@>=5.3
+* Generating single config file for Storybook
+
 ## 1.0.0
 
 ### Enhancements
