@@ -31,4 +31,11 @@ module.exports = [
       return true;
     },
   },
+  {
+    when: (answers) => answers.type === 'init' && !semver.gtr('5.2.0', answers.semver),
+    name: 'csf',
+    type: 'confirm',
+    default: true,
+    message: 'Use component story format?',
+  },
 ];

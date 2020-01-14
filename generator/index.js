@@ -6,13 +6,10 @@ module.exports = (api, options, rootOptions) => {
 
   const triConfig = !semver.gtr('5.3.0', options.semver);
 
-  // TODO: Typescript support
-  const hasTS = api.hasPlugin('typescript');
-  const hasBabel = api.hasPlugin('babel');
-
   const params = {
-    hasTS,
-    hasBabel,
+    hasTS: api.hasPlugin('typescript'), // TODO: Typescript support
+    hasBabel: api.hasPlugin('babel'),
+    csf: options.csf || false,
   };
 
   api.extendPackage({
@@ -29,7 +26,7 @@ module.exports = (api, options, rootOptions) => {
     },
   });
 
-  if (!hasBabel) {
+  if (!params.hasBabel) {
     api.extendPackage({
       devDependencies: {
         '@babel/core': '^7.4.5',

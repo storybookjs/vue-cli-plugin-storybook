@@ -1,5 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
+<%_ if (!csf) { _%>
 import { storiesOf } from '@storybook/vue'
+<%_ } _%>
 import { action } from '@storybook/addon-actions'
 <%_ if (hasBabel) { _%>
 import { linkTo } from '@storybook/addon-links'
@@ -7,23 +9,47 @@ import { linkTo } from '@storybook/addon-links'
 
 import MyButton from '../components/MyButton.vue'
 
+<%_ if (!csf) { _%>
 storiesOf('Button', module)
-  .add('with text', () => ({
+  .add('With Text', () => ({
     components: { MyButton },
     template: '<my-button @click="action">Hello Button</my-button>',
     methods: { action: action('clicked') }
   }))
   <%_ if (hasBabel) { _%>
-  .add('with JSX', () => ({
+  .add('With JSX', () => ({
     components: { MyButton },
     render() {
-      return <my-button onClick={this.action}>With JSX</my-button>;
-    },
-    methods: { action: linkTo('Button', 'with some emoji') }
+      return <my-button onClick={linkTo('Button', 'With Some Emoji')}>With JSX</my-button>;
+    }
   }))
   <%_ } _%>
-  .add('with some emoji', () => ({
+  .add('With Some Emoji', () => ({
     components: { MyButton },
-    template: '<my-button @click="action">😀 😎 👍 💯</my-button>',
-    methods: { action: action('clicked') }
+    template: '<my-button>😀 😎 👍 💯</my-button>'
   }))
+<%_ } else { _%>
+export default {
+  title: 'Button'
+}
+
+export const withText = () => ({
+  components: { MyButton },
+  template: '<my-button @click="action">Hello Button</my-button>',
+  methods: { action: action('clicked') }
+})
+
+<%_ if (hasBabel) { _%>
+export const withJSX = () => ({
+  components: { MyButton },
+  render() {
+    return <my-button onClick={linkTo('Button', 'With Some Emoji')}>With JSX</my-button>;
+  }
+})
+<%_ } _%>
+
+export const withSomeEmoji = () => ({
+  components: { MyButton },
+  template: '<my-button>😀 😎 👍 💯</my-button>'
+})
+<%_ } _%>
