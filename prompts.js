@@ -19,6 +19,16 @@ module.exports = [
     type: 'input',
     default: '>=5.3.0',
     message: `What storybook version do you want? ${chalk.yellow('(Please specify semver range)')}`,
-    validate: (input) => (input !== '' && semver.validRange(input) ? true : 'Given semver range is not valid.'),
+    validate: (input) => {
+      if (input === '' || !semver.validRange(input)) {
+        return 'Given semver range is not valid.';
+      }
+
+      if (!semver.prerelease(input) && !semver.intersects(input, '>=4.1.0')) {
+        return 'Minimum supported storybook version is 4.1.0';
+      }
+
+      return true;
+    },
   },
 ];
