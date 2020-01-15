@@ -1,6 +1,7 @@
 <%_ if (docs) { _%>
 import { Meta, Props, Story, Preview } from '@storybook/addon-docs/blocks';
 import { action } from "@storybook/addon-actions";
+import { linkTo } from '@storybook/addon-links'
 import MyButton from '../components/MyButton.vue';
 
 <Meta title="MDX|Button" component={MyButton} />
@@ -21,6 +22,12 @@ This is a simple button with some text in it.
         methods: { action: action("clicked") }
     }}
   </Story>
+</Preview>
+
+You can perform some action when the button is clicked.
+
+<Preview>
+  <RMyButton onClick={linkTo('Button', 'With Some Emoji')}>With JSX</RMyButton>
 </Preview>
 
 You can even have Emoji in the button.
