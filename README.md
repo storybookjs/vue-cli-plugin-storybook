@@ -8,7 +8,7 @@ Vue CLI plugin for Storybook
 $ vue add storybook
 ```
 
-<p align=center><img src=screencast.svg width=600></p>
+<p align=center><img src=https://asciinema.org/a/193115.png width=600></p>
 
 ## Usage
 
