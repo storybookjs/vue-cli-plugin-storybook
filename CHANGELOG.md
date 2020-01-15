@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.2.0
+
+### Enhancements
+* Added option to use Storybook CSF (component story format)
+* Added option and support for Storybook DocsPage and MDX stories
+* Sets `VUE_CLI_STORYBOOK` env variable to either `serve` or `build` when ran
+* Typescript support
+* Added `storybook-static` to git ignore list when the plugin is invoked
+
+### Bug Fixes
+* Fixes broken `storybook:build` for storybook@>=5.3
+
 ## 1.1.0
 
 ### Enhancements
