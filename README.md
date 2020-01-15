@@ -12,7 +12,7 @@ $ vue add storybook
 
 ## Usage
 
-It will create a config folder for storybook, a sample component and a sample story. The webpack config used for storybook is resolved from `vue-cli-service`, which means you don't need to have any special `webpack.config.js` in storybook config folder.
+It will create a config folder for storybook, a sample component and a sample story. The webpack config used for storybook is resolved from `vue-cli-service`, which means you don't need to have any special `webpack` section in storybook config folder.
 
 However, storybook will filter all the plugins for webpack according to internal list of allowed plugins. If you are extending your config with your custom plugins, you can extend list of allowed plugins by passing their names through `pluginOptions` in your `vue.config.js` like this:
 
@@ -27,6 +27,8 @@ However, storybook will filter all the plugins for webpack according to internal
   }
 }
 ```
+
+The name of the plugin is the string used in webpack-chains `config.plugin(...)` call.
 
 Note that only plugins defined with [webpack-chain](https://cli.vuejs.org/guide/webpack.html#chaining-advanced) config can be filtered using the `allowedPlugins` option. Plugings defined through `configureWebpack` will always be included in the final webpack config.
 
