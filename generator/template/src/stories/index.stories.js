@@ -29,6 +29,9 @@ storiesOf('Button', module)
   }))
 <%_ } else { _%>
 export default {
+  <%_ if (is_5_3) { _%>
+  component: MyButton,
+  <%_ } _%>
   title: 'Button'
 }
 

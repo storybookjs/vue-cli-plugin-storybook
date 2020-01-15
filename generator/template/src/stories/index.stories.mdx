@@ -1,11 +1,15 @@
 <%_ if (docs) { _%>
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Props, Story, Preview } from '@storybook/addon-docs/blocks';
 import { action } from "@storybook/addon-actions";
 import MyButton from '../components/MyButton.vue';
 
 <Meta title="MDX|Button" component={MyButton} />
 
 # Button
+
+<%_ if (is_5_3) { _%>
+<Props of={MyButton} />
+<%_ } _%>
 
 This is a simple button with some text in it.
 

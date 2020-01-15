@@ -1,3 +1,4 @@
+<%_ if (is_5_3) { _%>
 module.exports = {
   stories: ['../../src/**/*.stories.(js|jsx|ts|tsx|mdx)'],
   addons: [
@@ -28,3 +29,4 @@ module.exports = {
     '@storybook/addon-notes'
   ]
 }
+<%_ } _%>

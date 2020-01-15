@@ -1,3 +1,4 @@
+<%_ if (!is_5_3) { _%>
 <%_ if (docs) { _%>
 module.exports = [
   <%_ if (hasBabel) { _%>
@@ -20,4 +21,5 @@ module.exports = [
   '@storybook/addon-docs/vue/preset'
   <%_ } _%>
 ]
+<%_ } _%>
 <%_ } _%>

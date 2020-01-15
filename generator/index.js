@@ -4,13 +4,12 @@ const semver = require('semver');
 module.exports = (api, options, rootOptions) => {
   api.assertCliVersion('>=4');
 
-  const triConfig = !semver.gtr('5.3.0', options.semver);
-
   const params = {
     hasTS: api.hasPlugin('typescript'), // TODO: Typescript support
     hasBabel: api.hasPlugin('babel'),
     csf: options.csf || false,
     docs: options.docs || false,
+    is_5_3: !semver.gtr('5.3.0', options.semver),
   };
 
   api.extendPackage({
@@ -44,11 +43,5 @@ module.exports = (api, options, rootOptions) => {
     });
   }
 
-  api.render('./template/body', params);
-
-  if (triConfig) {
-    api.render('./template/config', params);
-  } else {
-    api.render('./template/old_config', params);
-  }
+  api.render('./template', params);
 };
