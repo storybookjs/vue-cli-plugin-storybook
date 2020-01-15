@@ -43,6 +43,6 @@ module.exports = [
     name: 'docs',
     type: 'confirm',
     default: false,
-    message: `Use Storybook Docs? ${chalk.yellow('(Does not work with)')}`,
+    message: 'Use Storybook Docs?',
   },
 ];
