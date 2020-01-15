@@ -18,9 +18,8 @@ storiesOf('Button', module)
   }))
   <%_ if (hasBabel) { _%>
   .add('With JSX', () => ({
-    components: { MyButton },
     render() {
-      return <my-button onClick={linkTo('Button', 'With Some Emoji')}>With JSX</my-button>;
+      return <MyButton onClick={linkTo('Button', 'With Some Emoji')}>With JSX</MyButton>;
     }
   }))
   <%_ } _%>
@@ -38,12 +37,11 @@ export const withText = () => ({
   template: '<my-button @click="action">Hello Button</my-button>',
   methods: { action: action('clicked') }
 })
-
 <%_ if (hasBabel) { _%>
+
 export const withJSX = () => ({
-  components: { MyButton },
   render() {
-    return <my-button onClick={linkTo('Button', 'With Some Emoji')}>With JSX</my-button>;
+    return <MyButton onClick={linkTo('Button', 'With Some Emoji')}>With JSX</MyButton>;
   }
 })
 <%_ } _%>

@@ -36,6 +36,13 @@ module.exports = [
     name: 'csf',
     type: 'confirm',
     default: true,
-    message: 'Use component story format?',
+    message: 'Use Storybook CSF (component story format)?',
+  },
+  {
+    when: (answers) => answers.type === 'init' && !semver.gtr('5.2.0', answers.semver),
+    name: 'docs',
+    type: 'confirm',
+    default: false,
+    message: `Use Storybook Docs? ${chalk.yellow('(Does not work with)')}`,
   },
 ];

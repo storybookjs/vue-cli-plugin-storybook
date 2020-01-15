@@ -10,6 +10,7 @@ module.exports = (api, options, rootOptions) => {
     hasTS: api.hasPlugin('typescript'), // TODO: Typescript support
     hasBabel: api.hasPlugin('babel'),
     csf: options.csf || false,
+    docs: options.docs || false,
   };
 
   api.extendPackage({
@@ -25,6 +26,14 @@ module.exports = (api, options, rootOptions) => {
       '@storybook/vue': options.semver,
     },
   });
+
+  if (params.docs) {
+    api.extendPackage({
+      devDependencies: {
+        '@storybook/addon-docs': options.semver,
+      },
+    });
+  }
 
   if (!params.hasBabel) {
     api.extendPackage({
