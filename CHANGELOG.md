@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.1
+
+### Enhancements
+* Added `docs` option for commands
+* Use RVueComponent JSX in MDX
+
 ## 1.2.0
 
 ### Enhancements
