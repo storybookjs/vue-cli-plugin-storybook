@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.2
+
+### Enhancements
+* Prevent global CSS imports from being removed by storybook-build
+
+### Bug Fixes
+* Fixes some issues with eslint without `eslint-plugin-import`
+
 ## 1.2.1
 
 ### Enhancements
