@@ -4,9 +4,13 @@ const semver = require('semver');
 module.exports = (api, options, rootOptions) => {
   api.assertCliVersion('>=4');
 
+  // eslint-disable-next-line import/no-dynamic-require, global-require
+  const pkg = require(api.resolve('package.json'));
+
   const params = {
     hasTS: api.hasPlugin('typescript'), // TODO: Typescript support
     hasBabel: api.hasPlugin('babel'),
+    hasEslintPluginImport: !!pkg.devDependencies['eslint-plugin-import'],
     csf: options.csf || false,
     docs: options.docs || false,
     is_5_3: !semver.gtr('5.3.0', options.semver),

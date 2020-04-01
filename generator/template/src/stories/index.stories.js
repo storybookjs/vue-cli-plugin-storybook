@@ -1,4 +1,6 @@
+<%_ if (hasEslintPluginImport) { _%>
 /* eslint-disable import/no-extraneous-dependencies */
+<%_ } _%>
 <%_ if (!csf) { _%>
 import { storiesOf } from '@storybook/vue'
 <%_ } _%>
