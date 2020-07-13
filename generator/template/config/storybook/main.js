@@ -25,8 +25,7 @@ module.exports = {
     <%_ } _%>
     <%_ } _%>
     '@storybook/addon-knobs',
-    '@storybook/addon-links',
-    '@storybook/addon-notes'
+    '@storybook/addon-links'
   ]
 }
 <%_ } _%>

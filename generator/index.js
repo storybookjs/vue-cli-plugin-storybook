@@ -25,7 +25,6 @@ module.exports = (api, options, rootOptions) => {
       '@storybook/addon-actions': options.semver,
       '@storybook/addon-knobs': options.semver,
       '@storybook/addon-links': options.semver,
-      '@storybook/addon-notes': options.semver,
       '@storybook/vue': options.semver,
     },
   });
