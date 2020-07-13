@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.3.0
+
+### Enhancements
+* Remove addon-notes from being included in the initial generation
+
 ## 1.2.2
 
 ### Enhancements
