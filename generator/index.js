@@ -14,7 +14,7 @@ module.exports = (api, options, rootOptions) => {
     csf: options.csf || false,
     docs: options.docs || false,
     is_5_3: !semver.gtr('5.3.0', options.semver),
-    is_6_0: semver.gte('6.0.0', options.semver),
+    is_6_0: !semver.gtr('6.0.0', options.semver),
   };
 
   // All versions need this
