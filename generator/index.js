@@ -14,25 +14,40 @@ module.exports = (api, options, rootOptions) => {
     csf: options.csf || false,
     docs: options.docs || false,
     is_5_3: !semver.gtr('5.3.0', options.semver),
+    is_6_0: semver.gte('6.0.0', options.semver),
   };
 
+  // All versions need this
   api.extendPackage({
     scripts: {
       'storybook:serve': 'vue-cli-service storybook:serve -p 6006 -c config/storybook',
       'storybook:build': 'vue-cli-service storybook:build -c config/storybook',
     },
     devDependencies: {
-      '@storybook/addon-actions': options.semver,
-      '@storybook/addon-knobs': options.semver,
-      '@storybook/addon-links': options.semver,
       '@storybook/vue': options.semver,
     },
   });
 
-  if (params.docs) {
+  if (!params.is_6_0) {
     api.extendPackage({
       devDependencies: {
-        '@storybook/addon-docs': options.semver,
+        '@storybook/addon-actions': options.semver,
+        '@storybook/addon-knobs': options.semver,
+        '@storybook/addon-links': options.semver,
+      },
+    });
+    if (params.docs) {
+      api.extendPackage({
+        devDependencies: {
+          '@storybook/addon-docs': options.semver,
+        },
+      });
+    }
+  } else {
+    // is 6.0+
+    api.extendPackage({
+      devDependencies: {
+        '@storybook/addon-essentials': options.semver,
       },
     });
   }

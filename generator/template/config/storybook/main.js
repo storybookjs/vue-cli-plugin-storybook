@@ -29,3 +29,8 @@ module.exports = {
   ]
 }
 <%_ } _%>
+<%_ if (is_6_0) { _%>
+  module.exports = {
+    stories: ['../../src/**/*.stories.@(js|jsx|ts|tsx|mdx)']
+  }
+  <%_ } _%>

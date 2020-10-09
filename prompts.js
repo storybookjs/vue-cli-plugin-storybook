@@ -17,7 +17,7 @@ module.exports = [
     when: (answers) => answers.type === 'init',
     name: 'semver',
     type: 'input',
-    default: '>=5.3.0',
+    default: '>=6.0.0',
     message: `What storybook version do you want? ${chalk.yellow('(Please specify semver range)')}`,
     validate: (input) => {
       if (input === '' || !semver.validRange(input)) {
@@ -39,7 +39,7 @@ module.exports = [
     message: 'Use Storybook CSF (component story format)?',
   },
   {
-    when: (answers) => answers.type === 'init' && !semver.gtr('5.2.0', answers.semver),
+    when: (answers) => answers.type === 'init' && !semver.gtr('5.2.0', answers.semver) && semver.ltr('6.0.0', answers.semver),
     name: 'docs',
     type: 'confirm',
     default: false,
