@@ -13,8 +13,8 @@ module.exports = (api, options, rootOptions) => {
     hasEslintPluginImport: !!pkg.devDependencies['eslint-plugin-import'],
     csf: options.csf || false,
     docs: options.docs || false,
-    is_5_3: !semver.gtr('5.3.0', options.semver),
-    is_6_0: !semver.gtr('6.0.0', options.semver),
+    is_5_3: semver.satisfies('5.3.0', options.semver),
+    is_6_0: semver.satisfies('6.0.0', options.semver),
   };
 
   // All versions need this
@@ -25,6 +25,7 @@ module.exports = (api, options, rootOptions) => {
     },
     devDependencies: {
       '@storybook/vue': options.semver,
+      '@storybook/addon-links': options.semver,
     },
   });
 
@@ -33,7 +34,6 @@ module.exports = (api, options, rootOptions) => {
       devDependencies: {
         '@storybook/addon-actions': options.semver,
         '@storybook/addon-knobs': options.semver,
-        '@storybook/addon-links': options.semver,
         '@storybook/core': options.semver,
       },
     });

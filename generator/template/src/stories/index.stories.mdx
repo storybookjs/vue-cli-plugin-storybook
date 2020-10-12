@@ -1,7 +1,13 @@
 <%_ if (docs) { _%>
+<%_ if (is_5_3) { _%>
 import { Meta, Props, Story, Preview } from '@storybook/addon-docs/blocks';
 import { action } from "@storybook/addon-actions";
+<%_ } _%>
+<%_ if (is_6_0) { _%>
+import { Meta, ArgsTable, Story, Canvas } from '@storybook/addon-docs/blocks';
+<%_ } _%>
 import { linkTo } from '@storybook/addon-links'
+
 import MyButton from '../components/MyButton.vue';
 
 <Meta title="MDX|Button" component={MyButton} />
@@ -11,33 +17,71 @@ import MyButton from '../components/MyButton.vue';
 <%_ if (is_5_3) { _%>
 <Props of={MyButton} />
 <%_ } _%>
+<%_ if (is_6_0) { _%>
+<ArgsTable of={MyButton} />
+<%_ } _%>
 
 This is a simple button with some text in it.
 
+<%_ if (is_5_3) { _%>
 <Preview>
+<%_ } _%>
+<%_ if (is_6_0) { _%>
+<Canvas>
+<%_ } _%>
   <Story name="With Text">
     {{
         components: { MyButton },
         template: '<my-button @click="action">Hello Button</my-button>',
+        <%_ if (is_5_3) { _%>
         methods: { action: action("clicked") }
+        <%_ } _%>
+        <%_ if (is_6_0) { _%>
+        methods: { action: "clicked" }
+        <%_ } _%>
     }}
   </Story>
+<%_ if (is_5_3) { _%>
 </Preview>
+<%_ } _%>
+<%_ if (is_6_0) { _%>
+</Canvas>
+<%_ } _%>
 
 You can perform some action when the button is clicked.
 
+<%_ if (is_5_3) { _%>
 <Preview>
+<%_ } _%>
+<%_ if (is_6_0) { _%>
+<Canvas>
+<%_ } _%>
   <RMyButton onClick={linkTo('Button', 'With Some Emoji')}>With JSX</RMyButton>
+<%_ if (is_5_3) { _%>
 </Preview>
+<%_ } _%>
+<%_ if (is_6_0) { _%>
+</Canvas>
+<%_ } _%>
 
 You can even have Emoji in the button.
 
+<%_ if (is_5_3) { _%>
 <Preview>
+<%_ } _%>
+<%_ if (is_6_0) { _%>
+<Canvas>
+<%_ } _%>
   <Story name="With Some Emoji">
     {{
         components: { MyButton },
         template: '<my-button>😀 😎 👍 💯</my-button>'
     }}
   </Story>
+<%_ if (is_5_3) { _%>
 </Preview>
+<%_ } _%>
+<%_ if (is_6_0) { _%>
+</Canvas>
+<%_ } _%>
 <%_ } _%>

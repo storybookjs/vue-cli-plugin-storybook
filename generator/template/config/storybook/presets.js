@@ -1,4 +1,4 @@
-<%_ if (!is_5_3) { _%>
+<%_ if (!is_5_3 && !is_6_0) { _%>
 <%_ if (docs) { _%>
 module.exports = [
   <%_ if (hasBabel) { _%>

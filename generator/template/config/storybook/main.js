@@ -31,6 +31,7 @@ module.exports = {
 <%_ } _%>
 <%_ if (is_6_0) { _%>
   module.exports = {
-    stories: ['../../src/**/*.stories.@(js|jsx|ts|tsx|mdx)']
+    stories: ['../../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
+    addons: ['@storybook/addon-essentials', '@storybook/addon-links']
   }
 <%_ } _%>
