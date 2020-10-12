@@ -33,4 +33,4 @@ module.exports = {
   module.exports = {
     stories: ['../../src/**/*.stories.@(js|jsx|ts|tsx|mdx)']
   }
-  <%_ } _%>
+<%_ } _%>
