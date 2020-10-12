@@ -34,6 +34,7 @@ module.exports = (api, options, rootOptions) => {
         '@storybook/addon-actions': options.semver,
         '@storybook/addon-knobs': options.semver,
         '@storybook/addon-links': options.semver,
+        '@storybook/core': options.semver,
       },
     });
     if (params.docs) {
