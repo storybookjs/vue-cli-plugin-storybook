@@ -7,7 +7,7 @@ import { linkTo } from '@storybook/addon-links'
 import MyButton from '../components/MyButton.vue'
 
 export default {
-  title: 'Button'
+  title: 'Button',
 }
 
 export const withText = () => ({
@@ -16,11 +16,13 @@ export const withText = () => ({
   methods: { action: action('clicked') }
 })
 
+<%_ if (hasBabel) { _%>
 export const withJSX = () => ({
   render() {
     return <MyButton onClick={linkTo('Button', 'With Some Emoji')}>With JSX</MyButton>;
   }
 })
+<%_ } _%>
 
 export const withSomeEmoji = () => ({
   components: { MyButton },
