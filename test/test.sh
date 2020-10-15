@@ -7,6 +7,6 @@ npm pack .
 npx vue create --preset test/preset.json tmp
 cd tmp
 npm i ../*.tgz
-npx vue invoke storybook
+npx vue invoke storybook --type init
 npm i
 npx chromatic test --build-script-name='storybook:build' --exit-zero-on-changes --no-interactive --debug

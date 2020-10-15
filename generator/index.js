@@ -20,7 +20,6 @@ module.exports = (api, options, rootOptions) => {
     },
     devDependencies: {
       '@storybook/vue': sbVersionRange,
-      '@storybook/addon-links': sbVersionRange,
       '@storybook/addon-essentials': sbVersionRange,
     },
   });
@@ -30,6 +29,13 @@ module.exports = (api, options, rootOptions) => {
       devDependencies: {
         '@babel/core': '^7.4.5',
         'babel-loader': '^8.0.4',
+      },
+    });
+  } else {
+    // Links is only added when babel is present
+    api.extendPackage({
+      devDependencies: {
+        '@storybook/addon-links': sbVersionRange,
       },
     });
   }

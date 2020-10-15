@@ -2,7 +2,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 <%_ } _%>
 import { action } from '@storybook/addon-actions'
+<%_ if (hasBabel) { _%>
 import { linkTo } from '@storybook/addon-links'
+<%_ } _%>
 
 import MyButton from '../components/MyButton.vue'
 
