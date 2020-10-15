@@ -1,20 +1,20 @@
-<%_ if (docs) { _%>
-import { Meta, Props, Story, Preview } from '@storybook/addon-docs/blocks';
-import { action } from "@storybook/addon-actions";
+
+import { Meta, ArgsTable, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions'
+<%_ if (hasBabel) { _%>
 import { linkTo } from '@storybook/addon-links'
+<%_ } _%>
 import MyButton from '../components/MyButton.vue';
 
 <Meta title="MDX|Button" component={MyButton} />
 
 # Button
 
-<%_ if (is_5_3) { _%>
-<Props of={MyButton} />
-<%_ } _%>
+<ArgsTable of={MyButton} />
 
 This is a simple button with some text in it.
 
-<Preview>
+<Canvas>
   <Story name="With Text">
     {{
         components: { MyButton },
@@ -22,22 +22,23 @@ This is a simple button with some text in it.
         methods: { action: action("clicked") }
     }}
   </Story>
-</Preview>
+</Canvas>
 
+<%_ if (hasBabel) { _%>
 You can perform some action when the button is clicked.
 
-<Preview>
+<Canvas>
   <RMyButton onClick={linkTo('Button', 'With Some Emoji')}>With JSX</RMyButton>
-</Preview>
+</Canvas>
+<%_ } _%>
 
 You can even have Emoji in the button.
 
-<Preview>
+<Canvas>
   <Story name="With Some Emoji">
     {{
         components: { MyButton },
         template: '<my-button>😀 😎 👍 💯</my-button>'
     }}
   </Story>
-</Preview>
-<%_ } _%>
+</Canvas>

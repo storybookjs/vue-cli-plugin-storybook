@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.0
+
+### Enhancements
+* (Breaking) Supports Storybook 6. Removed support for all older versions
+
 ## 1.3.0
 
 ### Enhancements
