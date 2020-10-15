@@ -28,7 +28,7 @@
     "semver": "^7.1.1"
   },
   "peerDependencies": {
-    "@storybook/vue": ">=4.1.0"
+    "@storybook/vue": ">=6.0.0"
   },
   "devDependencies": {
     "@vue/cli": "^4",

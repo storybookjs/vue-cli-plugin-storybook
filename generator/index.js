@@ -9,8 +9,10 @@ module.exports = (api, options, rootOptions) => {
     hasTS: api.hasPlugin('typescript'), // TODO: Typescript support
     hasBabel: api.hasPlugin('babel'),
     hasEslintPluginImport: !!pkg.devDependencies['eslint-plugin-import'],
+    versionRange: options.semver,
   };
-  const sbVersionRange = '^6.0.26';
+
+  console.log('PARAMS', params);
 
   // All versions need this
   api.extendPackage({
@@ -19,8 +21,8 @@ module.exports = (api, options, rootOptions) => {
       'storybook:build': 'vue-cli-service storybook:build -c config/storybook',
     },
     devDependencies: {
-      '@storybook/vue': sbVersionRange,
-      '@storybook/addon-essentials': sbVersionRange,
+      '@storybook/vue': params.versionRange,
+      '@storybook/addon-essentials': params.versionRange,
     },
   });
 
@@ -35,7 +37,7 @@ module.exports = (api, options, rootOptions) => {
     // Links is only added when babel is present
     api.extendPackage({
       devDependencies: {
-        '@storybook/addon-links': sbVersionRange,
+        '@storybook/addon-links': params.versionRange,
       },
     });
   }
