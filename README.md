@@ -33,7 +33,7 @@ The name of the plugin is the string used in webpack-chains `config.plugin(...)`
 Note that only plugins defined with [webpack-chain](https://cli.vuejs.org/guide/webpack.html#chaining-advanced) config can be filtered using the `allowedPlugins` option. Plugings defined through `configureWebpack` will always be included in the final webpack config.
 
 ## Contributors
-Here is a list of [Contributors](http://github.com/storybooks/vue-cli-plugin-storybook/contributors)
+Here is a list of [Contributors](http://github.com/storybookjs/vue-cli-plugin-storybook/contributors)
 
 We particularly thank `Almas Akchabayev <almas.akchabayev@gmail.com>` for the initial code and willing to transfer the project to us.
 
@@ -45,7 +45,7 @@ __I accept pull requests and guarantee a reply back within a day__
 MIT/X11
 
 ## Bug Reports
-Report [here](http://github.com/storybooks/vue-cli-plugin-storybook/issues). __Guaranteed reply within a day__.
+Report [here](http://github.com/storybookjs/vue-cli-plugin-storybook/issues). __Guaranteed reply within a day__.
 
 ## Contact
 Pavan Kumar Sunkara (pavan.sss1991@gmail.com)
