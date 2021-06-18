@@ -25,10 +25,20 @@
   "dependencies": {
     "chalk": "^3.0.0",
     "commander": "^2.19.0",
-    "semver": "^7.1.1"
+    "semver": "^7.1.1",
+    "@vue/cli-shared-utils": "^4.4.6"
   },
   "peerDependencies": {
-    "@storybook/vue": ">=6.0.0"
+    "@storybook/vue": ">=6.0.0",
+    "@storybook/vue3": ">=6.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@storybook/vue": {
+      "optional": true
+    },
+    "@storybook/vue3": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@vue/cli": "^4",
