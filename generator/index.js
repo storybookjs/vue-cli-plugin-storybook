@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 module.exports = (api, options, rootOptions) => {
   api.assertCliVersion('>=4');
+  const isVue3 = (rootOptions.vueVersion === '3');
 
   // eslint-disable-next-line import/no-dynamic-require, global-require
   const pkg = require(api.resolve('package.json'));
@@ -12,7 +13,7 @@ module.exports = (api, options, rootOptions) => {
     versionRange: options.semver,
   };
 
-  console.log('PARAMS', params);
+  const frameworkSupport = isVue3 ? '@storybook/vue3' : '@storybook/vue';
 
   // All versions need this
   api.extendPackage({
@@ -21,7 +22,7 @@ module.exports = (api, options, rootOptions) => {
       'storybook:build': 'vue-cli-service storybook:build -c config/storybook',
     },
     devDependencies: {
-      '@storybook/vue': params.versionRange,
+      [frameworkSupport]: params.versionRange,
       '@storybook/addon-essentials': params.versionRange,
     },
   });
