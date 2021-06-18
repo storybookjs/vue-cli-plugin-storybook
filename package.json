@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-storybook",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Vue CLI plugin for Storybook",
   "main": "./lib/index.js",
   "scripts": {
