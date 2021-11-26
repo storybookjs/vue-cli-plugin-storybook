@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 module.exports = (api, options, rootOptions) => {
-  api.assertCliVersion('>=4');
+  api.assertCliVersion('>=5');
   const isVue3 = (rootOptions.vueVersion === '3');
 
   // eslint-disable-next-line import/no-dynamic-require, global-require
@@ -22,8 +22,10 @@ module.exports = (api, options, rootOptions) => {
       'storybook:build': 'vue-cli-service storybook:build -c config/storybook',
     },
     devDependencies: {
-      [frameworkSupport]: params.versionRange,
       '@storybook/addon-essentials': params.versionRange,
+      '@storybook/builder-webpack5': params.versionRange,
+      '@storybook/manager-webpack5': params.versionRange,
+      [frameworkSupport]: params.versionRange,
     },
   });
 
