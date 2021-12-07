@@ -8,6 +8,12 @@ Vue CLI plugin for Storybook
 $ vue add storybook
 ```
 
+Or to install the next major version for vue-cli-5, please run
+
+```
+$ vue add storybook@next
+```
+
 <p align=center><img src=screencast.svg width=600></p>
 
 ## Usage

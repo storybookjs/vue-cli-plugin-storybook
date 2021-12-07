@@ -1,9 +1,6 @@
 
 import { Meta, ArgsTable, Story, Canvas } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions'
-<%_ if (hasBabel) { _%>
-import { linkTo } from '@storybook/addon-links'
-<%_ } _%>
 import MyButton from '../components/MyButton.vue';
 
 <Meta title="MDX / Button" component={MyButton} />
@@ -23,14 +20,6 @@ This is a simple button with some text in it.
     }}
   </Story>
 </Canvas>
-
-<%_ if (hasBabel) { _%>
-You can perform some action when the button is clicked.
-
-<Canvas>
-  <RMyButton onClick={linkTo('Button', 'With Some Emoji')}>With JSX</RMyButton>
-</Canvas>
-<%_ } _%>
 
 You can even have Emoji in the button.
 
