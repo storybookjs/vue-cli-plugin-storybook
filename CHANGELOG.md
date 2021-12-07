@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.0-rc.0
+
+### Breaking
+* Supports only @vue/cli@5
+* Supports only Storybook >= 6.2.0
+
 ## 2.1.0
 
 ### Enhancements
@@ -7,8 +13,8 @@
 
 ## 2.0.0
 
-### Enhancements
-* (Breaking) Supports Storybook 6. Removed support for all older versions
+### Breaking
+* Supports Storybook 6. Removed support for all older versions
 
 ## 1.3.0
 
