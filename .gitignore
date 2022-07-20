@@ -62,3 +62,4 @@ typings/
 
 tmp
 package-lock.json
+/.vscode/settings.json
