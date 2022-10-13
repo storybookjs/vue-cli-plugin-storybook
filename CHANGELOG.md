@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.0-rc.1
+
+### Enhancements
+* Supports Storybook >= 6.5
+
 ## 3.0.0-rc.0
 
 ### Breaking
